@@ -7,10 +7,24 @@ import PageTransition from "../components/PageTransition";
 
 export default function AdminDashboard() {
   const [analytics, setAnalytics] = useState(null);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    api.get("/analytics/overview").then(({ data }) => setAnalytics(data)).catch(() => setAnalytics(null));
+    api.get("/analytics/overview")
+      .then(({ data }) => setAnalytics(data))
+      .catch(() => setFailed(true));
   }, []);
+
+  if (failed) {
+    return (
+      <PageTransition className="page-shell pb-24 pt-8">
+        <div className="glass rounded-[2rem] p-8">
+          <p className="text-sm uppercase tracking-[0.28em] text-amber-200">Admin analytics</p>
+          <h1 className="mt-3 text-4xl font-black">No verified live data available</h1>
+        </div>
+      </PageTransition>
+    );
+  }
 
   if (!analytics) return <LoadingScreen />;
 

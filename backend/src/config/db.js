@@ -8,8 +8,13 @@ export const connectDB = async () => {
     return false;
   }
 
+  if (process.env.NODE_ENV === "production" && /localhost|127\.0\.0\.1/.test(uri)) {
+    console.warn("Local MongoDB URI ignored in production. API will use in-memory seed data.");
+    return false;
+  }
+
   try {
-    await mongoose.connect(uri);
+    await mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 });
     console.log("MongoDB connected");
     return true;
   } catch (error) {

@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     api.get("/fruits/trending")
-      .then(({ data }) => setFruits(data.fruits))
+      .then(({ data }) => setFruits(Array.isArray(data?.fruits) ? data.fruits : fallbackFruits))
       .catch(() => setFruits(fallbackFruits))
       .finally(() => setLoading(false));
   }, []);

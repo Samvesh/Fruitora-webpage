@@ -79,17 +79,61 @@ password: AdminPass123
 
 ## Deployment
 
-Frontend deployment:
+Recommended deployment:
 
-- Build command: `npm run build --prefix frontend`
-- Output directory: `frontend/dist`
-- Env: `VITE_API_URL=https://your-api-domain.com/api`
+- Backend: Render web service from the `backend` root directory
+- Frontend: Vercel project from the `frontend` root directory
 
-Backend deployment:
+### Render Backend
 
-- Start command: `npm start --prefix backend`
-- Env: `MONGODB_URI`, `JWT_SECRET`, `JWT_EXPIRES_IN`, `CLIENT_URL`, `PORT`
+Use these settings when creating the Render service:
+
+```text
+Language: Node
+Root Directory: backend
+Build Command: npm install
+Start Command: npm start
+```
+
+Render environment variables:
+
+```text
+NODE_ENV=production
+JWT_SECRET=<generate a long random secret>
+JWT_EXPIRES_IN=7d
+CLIENT_URL=https://your-vercel-frontend.vercel.app
+USDA_API_KEY=DEMO_KEY
+FAOSTAT_API_URL=https://fenixservices.fao.org/faostat/api/v1
+```
+
+Do not set `PORT` on Render; Render provides it automatically. Do not use `mongodb://127.0.0.1...` or `mongodb://localhost...` on Render. If you want persistent users and analytics, use MongoDB Atlas:
+
+```text
+MONGODB_URI=mongodb+srv://USER:PASSWORD@cluster.mongodb.net/fruitora
+```
+
+If `MONGODB_URI` is not set, the backend still runs with the bundled fruit dataset and in-memory analytics.
+
+### Vercel Frontend
+
+Use these settings when importing the GitHub repo into Vercel:
+
+```text
+Framework Preset: Vite
+Root Directory: frontend
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+```
+
+Vercel environment variable:
+
+```text
+VITE_API_URL=https://fruitoria.onrender.com/api
+```
+
+After both services are deployed, update the Render backend `CLIENT_URL` to the exact Vercel production URL and redeploy the backend. Then redeploy the Vercel frontend.
 
 ## Notes
 
-The UI intentionally uses remote Unsplash imagery and a CDN world atlas for production-grade visuals. If deploying in a locked-down environment, mirror these assets into your own CDN.
+The UI uses local fruit and recipe image assets in `frontend/public`, so the main production dependency is the backend API URL configured in Vercel.
