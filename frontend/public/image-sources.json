@@ -1,0 +1,1066 @@
+{
+  "fruits": [],
+  "recipes": [],
+  "failed": [
+    {
+      "type": "fruit",
+      "slug": "mango",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "banana",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "grapes",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "guava",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "orange",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "watermelon",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "papaya",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "pineapple",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "pomegranate",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "litchi",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "pear",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "plum",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "peach",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "dragon-fruit",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "jackfruit",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "sapota",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "custard-apple",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "coconut",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "kiwi",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "muskmelon",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "strawberry",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "amla",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "jamun",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "fig",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "ber",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "wood-apple",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "bael",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "tamarind",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "starfruit",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "rambutan",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "mangosteen",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "passion-fruit",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "avocado",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "blueberry",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "raspberry",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "blackberry",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "mulberry",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "date",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "apricot",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "sweet-lime",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "lemon",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "kinnow",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "persimmon",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "soursop",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "longan",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "pomelo",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "rose-apple",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "breadfruit",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "karonda",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "phalsa",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "tadgola",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "mahua",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "fruit",
+      "slug": "lasora",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mango-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mango-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mango-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "banana-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "banana-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "banana-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "grapes-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "grapes-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "grapes-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "guava-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "guava-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "guava-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "orange-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "orange-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "orange-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "watermelon-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "watermelon-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "watermelon-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "papaya-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "papaya-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "papaya-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pineapple-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pineapple-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pineapple-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pomegranate-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pomegranate-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pomegranate-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "litchi-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "litchi-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "litchi-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pear-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pear-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pear-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "plum-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "plum-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "plum-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "peach-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "peach-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "peach-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "dragon-fruit-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "dragon-fruit-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "dragon-fruit-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "jackfruit-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "jackfruit-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "jackfruit-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "sapota-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "sapota-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "sapota-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "custard-apple-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "custard-apple-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "custard-apple-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "coconut-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "coconut-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "coconut-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "kiwi-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "kiwi-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "kiwi-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "muskmelon-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "muskmelon-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "muskmelon-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "strawberry-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "strawberry-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "strawberry-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "amla-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "amla-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "amla-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "jamun-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "jamun-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "jamun-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "fig-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "fig-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "fig-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "ber-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "ber-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "ber-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "wood-apple-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "wood-apple-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "wood-apple-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "bael-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "bael-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "bael-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "tamarind-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "tamarind-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "tamarind-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "starfruit-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "starfruit-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "starfruit-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "rambutan-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "rambutan-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "rambutan-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mangosteen-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mangosteen-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mangosteen-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "passion-fruit-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "passion-fruit-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "passion-fruit-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "avocado-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "avocado-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "avocado-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "blueberry-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "blueberry-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "blueberry-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "raspberry-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "raspberry-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "raspberry-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "blackberry-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "blackberry-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "blackberry-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mulberry-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mulberry-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mulberry-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "date-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "date-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "date-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "apricot-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "apricot-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "apricot-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "sweet-lime-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "sweet-lime-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "sweet-lime-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "lemon-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "lemon-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "lemon-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "kinnow-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "kinnow-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "kinnow-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "persimmon-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "persimmon-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "persimmon-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "soursop-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "soursop-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "soursop-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "longan-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "longan-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "longan-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pomelo-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pomelo-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "pomelo-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "rose-apple-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "rose-apple-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "rose-apple-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "breadfruit-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "breadfruit-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "breadfruit-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "karonda-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "karonda-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "karonda-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "phalsa-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "phalsa-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "phalsa-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "tadgola-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "tadgola-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "tadgola-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mahua-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mahua-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "mahua-traditional",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "lasora-juice",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "lasora-smoothie",
+      "error": "Download failed 403"
+    },
+    {
+      "type": "recipe",
+      "id": "lasora-traditional",
+      "error": "Download failed 403"
+    }
+  ]
+}

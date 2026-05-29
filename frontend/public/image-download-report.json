@@ -1,0 +1,12 @@
+{
+    "downloaded":  211,
+    "failed":  1,
+    "failures":  [
+                     {
+                         "type":  "recipe",
+                         "id":  "avocado-traditional",
+                         "url":  "https://loremflickr.com/1400/1000/Avocado,Traditional,food,recipe",
+                         "error":  "The remote name could not be resolved: \u0027loremflickr.com\u0027"
+                     }
+                 ]
+}

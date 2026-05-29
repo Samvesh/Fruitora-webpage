@@ -1,0 +1,1274 @@
+[
+  {
+    "type": "fruit",
+    "id": "mango",
+    "url": "https://loremflickr.com/1400/1000/Mango,fruit",
+    "file": "frontend/public/fruits/mango.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "banana",
+    "url": "https://loremflickr.com/1400/1000/Banana,fruit",
+    "file": "frontend/public/fruits/banana.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "grapes",
+    "url": "https://loremflickr.com/1400/1000/Grapes,fruit",
+    "file": "frontend/public/fruits/grapes.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "guava",
+    "url": "https://loremflickr.com/1400/1000/Guava,fruit",
+    "file": "frontend/public/fruits/guava.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "orange",
+    "url": "https://loremflickr.com/1400/1000/Orange,fruit",
+    "file": "frontend/public/fruits/orange.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "watermelon",
+    "url": "https://loremflickr.com/1400/1000/Watermelon,fruit",
+    "file": "frontend/public/fruits/watermelon.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "papaya",
+    "url": "https://loremflickr.com/1400/1000/Papaya,fruit",
+    "file": "frontend/public/fruits/papaya.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "pineapple",
+    "url": "https://loremflickr.com/1400/1000/Pineapple,fruit",
+    "file": "frontend/public/fruits/pineapple.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "pomegranate",
+    "url": "https://loremflickr.com/1400/1000/Pomegranate,fruit",
+    "file": "frontend/public/fruits/pomegranate.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "litchi",
+    "url": "https://loremflickr.com/1400/1000/Litchi,fruit",
+    "file": "frontend/public/fruits/litchi.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "pear",
+    "url": "https://loremflickr.com/1400/1000/Pear,fruit",
+    "file": "frontend/public/fruits/pear.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "plum",
+    "url": "https://loremflickr.com/1400/1000/Plum,fruit",
+    "file": "frontend/public/fruits/plum.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "peach",
+    "url": "https://loremflickr.com/1400/1000/Peach,fruit",
+    "file": "frontend/public/fruits/peach.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "dragon-fruit",
+    "url": "https://loremflickr.com/1400/1000/Dragon,Fruit,fruit",
+    "file": "frontend/public/fruits/dragon-fruit.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "jackfruit",
+    "url": "https://loremflickr.com/1400/1000/Jackfruit,fruit",
+    "file": "frontend/public/fruits/jackfruit.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "sapota",
+    "url": "https://loremflickr.com/1400/1000/Sapota,fruit",
+    "file": "frontend/public/fruits/sapota.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "custard-apple",
+    "url": "https://loremflickr.com/1400/1000/Custard,Apple,fruit",
+    "file": "frontend/public/fruits/custard-apple.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "coconut",
+    "url": "https://loremflickr.com/1400/1000/Coconut,fruit",
+    "file": "frontend/public/fruits/coconut.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "kiwi",
+    "url": "https://loremflickr.com/1400/1000/Kiwi,fruit",
+    "file": "frontend/public/fruits/kiwi.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "muskmelon",
+    "url": "https://loremflickr.com/1400/1000/Muskmelon,fruit",
+    "file": "frontend/public/fruits/muskmelon.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "strawberry",
+    "url": "https://loremflickr.com/1400/1000/Strawberry,fruit",
+    "file": "frontend/public/fruits/strawberry.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "amla",
+    "url": "https://loremflickr.com/1400/1000/Amla,fruit",
+    "file": "frontend/public/fruits/amla.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "jamun",
+    "url": "https://loremflickr.com/1400/1000/Jamun,fruit",
+    "file": "frontend/public/fruits/jamun.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "fig",
+    "url": "https://loremflickr.com/1400/1000/Fig,fruit",
+    "file": "frontend/public/fruits/fig.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "ber",
+    "url": "https://loremflickr.com/1400/1000/Indian,Jujube,fruit",
+    "file": "frontend/public/fruits/ber.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "wood-apple",
+    "url": "https://loremflickr.com/1400/1000/Wood,Apple,fruit",
+    "file": "frontend/public/fruits/wood-apple.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "bael",
+    "url": "https://loremflickr.com/1400/1000/Bael,fruit",
+    "file": "frontend/public/fruits/bael.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "tamarind",
+    "url": "https://loremflickr.com/1400/1000/Tamarind,fruit",
+    "file": "frontend/public/fruits/tamarind.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "starfruit",
+    "url": "https://loremflickr.com/1400/1000/Star,Fruit,fruit",
+    "file": "frontend/public/fruits/starfruit.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "rambutan",
+    "url": "https://loremflickr.com/1400/1000/Rambutan,fruit",
+    "file": "frontend/public/fruits/rambutan.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "mangosteen",
+    "url": "https://loremflickr.com/1400/1000/Mangosteen,fruit",
+    "file": "frontend/public/fruits/mangosteen.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "passion-fruit",
+    "url": "https://loremflickr.com/1400/1000/Passion,Fruit,fruit",
+    "file": "frontend/public/fruits/passion-fruit.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "avocado",
+    "url": "https://loremflickr.com/1400/1000/Avocado,fruit",
+    "file": "frontend/public/fruits/avocado.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "blueberry",
+    "url": "https://loremflickr.com/1400/1000/Blueberry,fruit",
+    "file": "frontend/public/fruits/blueberry.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "raspberry",
+    "url": "https://loremflickr.com/1400/1000/Raspberry,fruit",
+    "file": "frontend/public/fruits/raspberry.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "blackberry",
+    "url": "https://loremflickr.com/1400/1000/Blackberry,fruit",
+    "file": "frontend/public/fruits/blackberry.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "mulberry",
+    "url": "https://loremflickr.com/1400/1000/Mulberry,fruit",
+    "file": "frontend/public/fruits/mulberry.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "date",
+    "url": "https://loremflickr.com/1400/1000/Date,fruit",
+    "file": "frontend/public/fruits/date.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "apricot",
+    "url": "https://loremflickr.com/1400/1000/Apricot,fruit",
+    "file": "frontend/public/fruits/apricot.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "sweet-lime",
+    "url": "https://loremflickr.com/1400/1000/Sweet,Lime,fruit",
+    "file": "frontend/public/fruits/sweet-lime.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "lemon",
+    "url": "https://loremflickr.com/1400/1000/Lemon,fruit",
+    "file": "frontend/public/fruits/lemon.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "kinnow",
+    "url": "https://loremflickr.com/1400/1000/Kinnow,fruit",
+    "file": "frontend/public/fruits/kinnow.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "persimmon",
+    "url": "https://loremflickr.com/1400/1000/Persimmon,fruit",
+    "file": "frontend/public/fruits/persimmon.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "soursop",
+    "url": "https://loremflickr.com/1400/1000/Soursop,fruit",
+    "file": "frontend/public/fruits/soursop.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "longan",
+    "url": "https://loremflickr.com/1400/1000/Longan,fruit",
+    "file": "frontend/public/fruits/longan.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "pomelo",
+    "url": "https://loremflickr.com/1400/1000/Pomelo,fruit",
+    "file": "frontend/public/fruits/pomelo.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "rose-apple",
+    "url": "https://loremflickr.com/1400/1000/Rose,Apple,fruit",
+    "file": "frontend/public/fruits/rose-apple.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "breadfruit",
+    "url": "https://loremflickr.com/1400/1000/Breadfruit,fruit",
+    "file": "frontend/public/fruits/breadfruit.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "karonda",
+    "url": "https://loremflickr.com/1400/1000/Karonda,fruit",
+    "file": "frontend/public/fruits/karonda.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "phalsa",
+    "url": "https://loremflickr.com/1400/1000/Phalsa,fruit",
+    "file": "frontend/public/fruits/phalsa.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "tadgola",
+    "url": "https://loremflickr.com/1400/1000/Ice,Apple,fruit",
+    "file": "frontend/public/fruits/tadgola.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "mahua",
+    "url": "https://loremflickr.com/1400/1000/Mahua,fruit",
+    "file": "frontend/public/fruits/mahua.jpg"
+  },
+  {
+    "type": "fruit",
+    "id": "lasora",
+    "url": "https://loremflickr.com/1400/1000/Lasora,fruit",
+    "file": "frontend/public/fruits/lasora.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mango-juice",
+    "url": "https://loremflickr.com/1400/1000/Mango,Juice,food,recipe",
+    "file": "frontend/public/recipes/mango-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mango-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Mango,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/mango-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mango-traditional",
+    "url": "https://loremflickr.com/1400/1000/Mango,Traditional,food,recipe",
+    "file": "frontend/public/recipes/mango-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "banana-juice",
+    "url": "https://loremflickr.com/1400/1000/Banana,Juice,food,recipe",
+    "file": "frontend/public/recipes/banana-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "banana-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Banana,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/banana-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "banana-traditional",
+    "url": "https://loremflickr.com/1400/1000/Banana,Traditional,food,recipe",
+    "file": "frontend/public/recipes/banana-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "grapes-juice",
+    "url": "https://loremflickr.com/1400/1000/Grapes,Juice,food,recipe",
+    "file": "frontend/public/recipes/grapes-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "grapes-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Grapes,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/grapes-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "grapes-traditional",
+    "url": "https://loremflickr.com/1400/1000/Grapes,Traditional,food,recipe",
+    "file": "frontend/public/recipes/grapes-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "guava-juice",
+    "url": "https://loremflickr.com/1400/1000/Guava,Juice,food,recipe",
+    "file": "frontend/public/recipes/guava-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "guava-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Guava,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/guava-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "guava-traditional",
+    "url": "https://loremflickr.com/1400/1000/Guava,Traditional,food,recipe",
+    "file": "frontend/public/recipes/guava-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "orange-juice",
+    "url": "https://loremflickr.com/1400/1000/Orange,Juice,food,recipe",
+    "file": "frontend/public/recipes/orange-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "orange-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Orange,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/orange-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "orange-traditional",
+    "url": "https://loremflickr.com/1400/1000/Orange,Traditional,food,recipe",
+    "file": "frontend/public/recipes/orange-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "watermelon-juice",
+    "url": "https://loremflickr.com/1400/1000/Watermelon,Juice,food,recipe",
+    "file": "frontend/public/recipes/watermelon-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "watermelon-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Watermelon,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/watermelon-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "watermelon-traditional",
+    "url": "https://loremflickr.com/1400/1000/Watermelon,Traditional,food,recipe",
+    "file": "frontend/public/recipes/watermelon-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "papaya-juice",
+    "url": "https://loremflickr.com/1400/1000/Papaya,Juice,food,recipe",
+    "file": "frontend/public/recipes/papaya-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "papaya-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Papaya,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/papaya-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "papaya-traditional",
+    "url": "https://loremflickr.com/1400/1000/Papaya,Traditional,food,recipe",
+    "file": "frontend/public/recipes/papaya-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pineapple-juice",
+    "url": "https://loremflickr.com/1400/1000/Pineapple,Juice,food,recipe",
+    "file": "frontend/public/recipes/pineapple-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pineapple-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Pineapple,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/pineapple-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pineapple-traditional",
+    "url": "https://loremflickr.com/1400/1000/Pineapple,Traditional,food,recipe",
+    "file": "frontend/public/recipes/pineapple-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pomegranate-juice",
+    "url": "https://loremflickr.com/1400/1000/Pomegranate,Juice,food,recipe",
+    "file": "frontend/public/recipes/pomegranate-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pomegranate-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Pomegranate,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/pomegranate-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pomegranate-traditional",
+    "url": "https://loremflickr.com/1400/1000/Pomegranate,Traditional,food,recipe",
+    "file": "frontend/public/recipes/pomegranate-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "litchi-juice",
+    "url": "https://loremflickr.com/1400/1000/Litchi,Juice,food,recipe",
+    "file": "frontend/public/recipes/litchi-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "litchi-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Litchi,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/litchi-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "litchi-traditional",
+    "url": "https://loremflickr.com/1400/1000/Litchi,Traditional,food,recipe",
+    "file": "frontend/public/recipes/litchi-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pear-juice",
+    "url": "https://loremflickr.com/1400/1000/Pear,Juice,food,recipe",
+    "file": "frontend/public/recipes/pear-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pear-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Pear,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/pear-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pear-traditional",
+    "url": "https://loremflickr.com/1400/1000/Pear,Traditional,food,recipe",
+    "file": "frontend/public/recipes/pear-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "plum-juice",
+    "url": "https://loremflickr.com/1400/1000/Plum,Juice,food,recipe",
+    "file": "frontend/public/recipes/plum-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "plum-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Plum,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/plum-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "plum-traditional",
+    "url": "https://loremflickr.com/1400/1000/Plum,Traditional,food,recipe",
+    "file": "frontend/public/recipes/plum-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "peach-juice",
+    "url": "https://loremflickr.com/1400/1000/Peach,Juice,food,recipe",
+    "file": "frontend/public/recipes/peach-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "peach-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Peach,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/peach-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "peach-traditional",
+    "url": "https://loremflickr.com/1400/1000/Peach,Traditional,food,recipe",
+    "file": "frontend/public/recipes/peach-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "dragon-fruit-juice",
+    "url": "https://loremflickr.com/1400/1000/Dragon,Fruit,Juice,food,recipe",
+    "file": "frontend/public/recipes/dragon-fruit-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "dragon-fruit-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Dragon,Fruit,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/dragon-fruit-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "dragon-fruit-traditional",
+    "url": "https://loremflickr.com/1400/1000/Dragon,Fruit,Traditional,food,recipe",
+    "file": "frontend/public/recipes/dragon-fruit-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "jackfruit-juice",
+    "url": "https://loremflickr.com/1400/1000/Jackfruit,Juice,food,recipe",
+    "file": "frontend/public/recipes/jackfruit-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "jackfruit-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Jackfruit,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/jackfruit-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "jackfruit-traditional",
+    "url": "https://loremflickr.com/1400/1000/Jackfruit,Traditional,food,recipe",
+    "file": "frontend/public/recipes/jackfruit-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "sapota-juice",
+    "url": "https://loremflickr.com/1400/1000/Sapota,Juice,food,recipe",
+    "file": "frontend/public/recipes/sapota-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "sapota-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Sapota,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/sapota-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "sapota-traditional",
+    "url": "https://loremflickr.com/1400/1000/Sapota,Traditional,food,recipe",
+    "file": "frontend/public/recipes/sapota-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "custard-apple-juice",
+    "url": "https://loremflickr.com/1400/1000/Custard,Apple,Juice,food,recipe",
+    "file": "frontend/public/recipes/custard-apple-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "custard-apple-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Custard,Apple,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/custard-apple-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "custard-apple-traditional",
+    "url": "https://loremflickr.com/1400/1000/Custard,Apple,Traditional,food,recipe",
+    "file": "frontend/public/recipes/custard-apple-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "coconut-juice",
+    "url": "https://loremflickr.com/1400/1000/Coconut,Juice,food,recipe",
+    "file": "frontend/public/recipes/coconut-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "coconut-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Coconut,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/coconut-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "coconut-traditional",
+    "url": "https://loremflickr.com/1400/1000/Coconut,Traditional,food,recipe",
+    "file": "frontend/public/recipes/coconut-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "kiwi-juice",
+    "url": "https://loremflickr.com/1400/1000/Kiwi,Juice,food,recipe",
+    "file": "frontend/public/recipes/kiwi-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "kiwi-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Kiwi,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/kiwi-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "kiwi-traditional",
+    "url": "https://loremflickr.com/1400/1000/Kiwi,Traditional,food,recipe",
+    "file": "frontend/public/recipes/kiwi-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "muskmelon-juice",
+    "url": "https://loremflickr.com/1400/1000/Muskmelon,Juice,food,recipe",
+    "file": "frontend/public/recipes/muskmelon-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "muskmelon-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Muskmelon,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/muskmelon-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "muskmelon-traditional",
+    "url": "https://loremflickr.com/1400/1000/Muskmelon,Traditional,food,recipe",
+    "file": "frontend/public/recipes/muskmelon-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "strawberry-juice",
+    "url": "https://loremflickr.com/1400/1000/Strawberry,Juice,food,recipe",
+    "file": "frontend/public/recipes/strawberry-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "strawberry-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Strawberry,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/strawberry-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "strawberry-traditional",
+    "url": "https://loremflickr.com/1400/1000/Strawberry,Traditional,food,recipe",
+    "file": "frontend/public/recipes/strawberry-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "amla-juice",
+    "url": "https://loremflickr.com/1400/1000/Amla,Juice,food,recipe",
+    "file": "frontend/public/recipes/amla-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "amla-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Amla,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/amla-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "amla-traditional",
+    "url": "https://loremflickr.com/1400/1000/Amla,Traditional,food,recipe",
+    "file": "frontend/public/recipes/amla-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "jamun-juice",
+    "url": "https://loremflickr.com/1400/1000/Jamun,Juice,food,recipe",
+    "file": "frontend/public/recipes/jamun-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "jamun-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Jamun,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/jamun-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "jamun-traditional",
+    "url": "https://loremflickr.com/1400/1000/Jamun,Traditional,food,recipe",
+    "file": "frontend/public/recipes/jamun-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "fig-juice",
+    "url": "https://loremflickr.com/1400/1000/Fig,Juice,food,recipe",
+    "file": "frontend/public/recipes/fig-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "fig-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Fig,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/fig-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "fig-traditional",
+    "url": "https://loremflickr.com/1400/1000/Fig,Traditional,food,recipe",
+    "file": "frontend/public/recipes/fig-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "ber-juice",
+    "url": "https://loremflickr.com/1400/1000/Indian,Jujube,Juice,food,recipe",
+    "file": "frontend/public/recipes/ber-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "ber-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Indian,Jujube,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/ber-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "ber-traditional",
+    "url": "https://loremflickr.com/1400/1000/Indian,Jujube,Traditional,food,recipe",
+    "file": "frontend/public/recipes/ber-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "wood-apple-juice",
+    "url": "https://loremflickr.com/1400/1000/Wood,Apple,Juice,food,recipe",
+    "file": "frontend/public/recipes/wood-apple-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "wood-apple-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Wood,Apple,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/wood-apple-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "wood-apple-traditional",
+    "url": "https://loremflickr.com/1400/1000/Wood,Apple,Traditional,food,recipe",
+    "file": "frontend/public/recipes/wood-apple-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "bael-juice",
+    "url": "https://loremflickr.com/1400/1000/Bael,Juice,food,recipe",
+    "file": "frontend/public/recipes/bael-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "bael-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Bael,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/bael-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "bael-traditional",
+    "url": "https://loremflickr.com/1400/1000/Bael,Traditional,food,recipe",
+    "file": "frontend/public/recipes/bael-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "tamarind-juice",
+    "url": "https://loremflickr.com/1400/1000/Tamarind,Juice,food,recipe",
+    "file": "frontend/public/recipes/tamarind-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "tamarind-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Tamarind,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/tamarind-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "tamarind-traditional",
+    "url": "https://loremflickr.com/1400/1000/Tamarind,Traditional,food,recipe",
+    "file": "frontend/public/recipes/tamarind-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "starfruit-juice",
+    "url": "https://loremflickr.com/1400/1000/Star,Fruit,Juice,food,recipe",
+    "file": "frontend/public/recipes/starfruit-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "starfruit-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Star,Fruit,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/starfruit-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "starfruit-traditional",
+    "url": "https://loremflickr.com/1400/1000/Star,Fruit,Traditional,food,recipe",
+    "file": "frontend/public/recipes/starfruit-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "rambutan-juice",
+    "url": "https://loremflickr.com/1400/1000/Rambutan,Juice,food,recipe",
+    "file": "frontend/public/recipes/rambutan-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "rambutan-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Rambutan,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/rambutan-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "rambutan-traditional",
+    "url": "https://loremflickr.com/1400/1000/Rambutan,Traditional,food,recipe",
+    "file": "frontend/public/recipes/rambutan-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mangosteen-juice",
+    "url": "https://loremflickr.com/1400/1000/Mangosteen,Juice,food,recipe",
+    "file": "frontend/public/recipes/mangosteen-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mangosteen-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Mangosteen,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/mangosteen-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mangosteen-traditional",
+    "url": "https://loremflickr.com/1400/1000/Mangosteen,Traditional,food,recipe",
+    "file": "frontend/public/recipes/mangosteen-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "passion-fruit-juice",
+    "url": "https://loremflickr.com/1400/1000/Passion,Fruit,Juice,food,recipe",
+    "file": "frontend/public/recipes/passion-fruit-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "passion-fruit-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Passion,Fruit,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/passion-fruit-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "passion-fruit-traditional",
+    "url": "https://loremflickr.com/1400/1000/Passion,Fruit,Traditional,food,recipe",
+    "file": "frontend/public/recipes/passion-fruit-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "avocado-juice",
+    "url": "https://loremflickr.com/1400/1000/Avocado,Juice,food,recipe",
+    "file": "frontend/public/recipes/avocado-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "avocado-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Avocado,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/avocado-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "avocado-traditional",
+    "url": "https://loremflickr.com/1400/1000/Avocado,Traditional,food,recipe",
+    "file": "frontend/public/recipes/avocado-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "blueberry-juice",
+    "url": "https://loremflickr.com/1400/1000/Blueberry,Juice,food,recipe",
+    "file": "frontend/public/recipes/blueberry-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "blueberry-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Blueberry,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/blueberry-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "blueberry-traditional",
+    "url": "https://loremflickr.com/1400/1000/Blueberry,Traditional,food,recipe",
+    "file": "frontend/public/recipes/blueberry-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "raspberry-juice",
+    "url": "https://loremflickr.com/1400/1000/Raspberry,Juice,food,recipe",
+    "file": "frontend/public/recipes/raspberry-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "raspberry-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Raspberry,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/raspberry-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "raspberry-traditional",
+    "url": "https://loremflickr.com/1400/1000/Raspberry,Traditional,food,recipe",
+    "file": "frontend/public/recipes/raspberry-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "blackberry-juice",
+    "url": "https://loremflickr.com/1400/1000/Blackberry,Juice,food,recipe",
+    "file": "frontend/public/recipes/blackberry-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "blackberry-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Blackberry,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/blackberry-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "blackberry-traditional",
+    "url": "https://loremflickr.com/1400/1000/Blackberry,Traditional,food,recipe",
+    "file": "frontend/public/recipes/blackberry-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mulberry-juice",
+    "url": "https://loremflickr.com/1400/1000/Mulberry,Juice,food,recipe",
+    "file": "frontend/public/recipes/mulberry-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mulberry-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Mulberry,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/mulberry-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mulberry-traditional",
+    "url": "https://loremflickr.com/1400/1000/Mulberry,Traditional,food,recipe",
+    "file": "frontend/public/recipes/mulberry-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "date-juice",
+    "url": "https://loremflickr.com/1400/1000/Date,Juice,food,recipe",
+    "file": "frontend/public/recipes/date-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "date-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Date,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/date-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "date-traditional",
+    "url": "https://loremflickr.com/1400/1000/Date,Traditional,food,recipe",
+    "file": "frontend/public/recipes/date-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "apricot-juice",
+    "url": "https://loremflickr.com/1400/1000/Apricot,Juice,food,recipe",
+    "file": "frontend/public/recipes/apricot-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "apricot-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Apricot,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/apricot-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "apricot-traditional",
+    "url": "https://loremflickr.com/1400/1000/Apricot,Traditional,food,recipe",
+    "file": "frontend/public/recipes/apricot-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "sweet-lime-juice",
+    "url": "https://loremflickr.com/1400/1000/Sweet,Lime,Juice,food,recipe",
+    "file": "frontend/public/recipes/sweet-lime-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "sweet-lime-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Sweet,Lime,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/sweet-lime-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "sweet-lime-traditional",
+    "url": "https://loremflickr.com/1400/1000/Sweet,Lime,Traditional,food,recipe",
+    "file": "frontend/public/recipes/sweet-lime-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "lemon-juice",
+    "url": "https://loremflickr.com/1400/1000/Lemon,Juice,food,recipe",
+    "file": "frontend/public/recipes/lemon-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "lemon-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Lemon,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/lemon-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "lemon-traditional",
+    "url": "https://loremflickr.com/1400/1000/Lemon,Traditional,food,recipe",
+    "file": "frontend/public/recipes/lemon-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "kinnow-juice",
+    "url": "https://loremflickr.com/1400/1000/Kinnow,Juice,food,recipe",
+    "file": "frontend/public/recipes/kinnow-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "kinnow-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Kinnow,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/kinnow-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "kinnow-traditional",
+    "url": "https://loremflickr.com/1400/1000/Kinnow,Traditional,food,recipe",
+    "file": "frontend/public/recipes/kinnow-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "persimmon-juice",
+    "url": "https://loremflickr.com/1400/1000/Persimmon,Juice,food,recipe",
+    "file": "frontend/public/recipes/persimmon-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "persimmon-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Persimmon,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/persimmon-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "persimmon-traditional",
+    "url": "https://loremflickr.com/1400/1000/Persimmon,Traditional,food,recipe",
+    "file": "frontend/public/recipes/persimmon-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "soursop-juice",
+    "url": "https://loremflickr.com/1400/1000/Soursop,Juice,food,recipe",
+    "file": "frontend/public/recipes/soursop-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "soursop-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Soursop,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/soursop-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "soursop-traditional",
+    "url": "https://loremflickr.com/1400/1000/Soursop,Traditional,food,recipe",
+    "file": "frontend/public/recipes/soursop-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "longan-juice",
+    "url": "https://loremflickr.com/1400/1000/Longan,Juice,food,recipe",
+    "file": "frontend/public/recipes/longan-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "longan-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Longan,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/longan-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "longan-traditional",
+    "url": "https://loremflickr.com/1400/1000/Longan,Traditional,food,recipe",
+    "file": "frontend/public/recipes/longan-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pomelo-juice",
+    "url": "https://loremflickr.com/1400/1000/Pomelo,Juice,food,recipe",
+    "file": "frontend/public/recipes/pomelo-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pomelo-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Pomelo,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/pomelo-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "pomelo-traditional",
+    "url": "https://loremflickr.com/1400/1000/Pomelo,Traditional,food,recipe",
+    "file": "frontend/public/recipes/pomelo-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "rose-apple-juice",
+    "url": "https://loremflickr.com/1400/1000/Rose,Apple,Juice,food,recipe",
+    "file": "frontend/public/recipes/rose-apple-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "rose-apple-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Rose,Apple,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/rose-apple-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "rose-apple-traditional",
+    "url": "https://loremflickr.com/1400/1000/Rose,Apple,Traditional,food,recipe",
+    "file": "frontend/public/recipes/rose-apple-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "breadfruit-juice",
+    "url": "https://loremflickr.com/1400/1000/Breadfruit,Juice,food,recipe",
+    "file": "frontend/public/recipes/breadfruit-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "breadfruit-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Breadfruit,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/breadfruit-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "breadfruit-traditional",
+    "url": "https://loremflickr.com/1400/1000/Breadfruit,Traditional,food,recipe",
+    "file": "frontend/public/recipes/breadfruit-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "karonda-juice",
+    "url": "https://loremflickr.com/1400/1000/Karonda,Juice,food,recipe",
+    "file": "frontend/public/recipes/karonda-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "karonda-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Karonda,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/karonda-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "karonda-traditional",
+    "url": "https://loremflickr.com/1400/1000/Karonda,Traditional,food,recipe",
+    "file": "frontend/public/recipes/karonda-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "phalsa-juice",
+    "url": "https://loremflickr.com/1400/1000/Phalsa,Juice,food,recipe",
+    "file": "frontend/public/recipes/phalsa-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "phalsa-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Phalsa,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/phalsa-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "phalsa-traditional",
+    "url": "https://loremflickr.com/1400/1000/Phalsa,Traditional,food,recipe",
+    "file": "frontend/public/recipes/phalsa-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "tadgola-juice",
+    "url": "https://loremflickr.com/1400/1000/Ice,Apple,Juice,food,recipe",
+    "file": "frontend/public/recipes/tadgola-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "tadgola-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Ice,Apple,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/tadgola-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "tadgola-traditional",
+    "url": "https://loremflickr.com/1400/1000/Ice,Apple,Traditional,food,recipe",
+    "file": "frontend/public/recipes/tadgola-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mahua-juice",
+    "url": "https://loremflickr.com/1400/1000/Mahua,Juice,food,recipe",
+    "file": "frontend/public/recipes/mahua-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mahua-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Mahua,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/mahua-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "mahua-traditional",
+    "url": "https://loremflickr.com/1400/1000/Mahua,Traditional,food,recipe",
+    "file": "frontend/public/recipes/mahua-traditional.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "lasora-juice",
+    "url": "https://loremflickr.com/1400/1000/Lasora,Juice,food,recipe",
+    "file": "frontend/public/recipes/lasora-juice.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "lasora-smoothie",
+    "url": "https://loremflickr.com/1400/1000/Lasora,Smoothie,food,recipe",
+    "file": "frontend/public/recipes/lasora-smoothie.jpg"
+  },
+  {
+    "type": "recipe",
+    "id": "lasora-traditional",
+    "url": "https://loremflickr.com/1400/1000/Lasora,Traditional,food,recipe",
+    "file": "frontend/public/recipes/lasora-traditional.jpg"
+  }
+]
