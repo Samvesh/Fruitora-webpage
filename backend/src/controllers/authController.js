@@ -21,10 +21,21 @@ export const register = async (req, res) => {
   if (password.length < 8) return res.status(400).json({ message: "Password must be at least 8 characters" });
 
   if (isMongoReady()) {
-    const exists = await User.findOne({ email });
-    if (exists) return res.status(409).json({ message: "Email already registered" });
-    const user = await User.create({ name, email, password, region });
-    return res.status(201).json({ user: publicUser(user), token: signToken(user) });
+    try {
+      const exists = await User.findOne({ email });
+      if (exists) return res.status(409).json({ message: "Email already registered" });
+      const user = await User.create({ name, email, password, region });
+      return res.status(201).json({ user: publicUser(user), token: signToken(user) });
+    } catch (err) {
+      // Mongoose duplicate key (race condition between findOne and create)
+      if (err.code === 11000) return res.status(409).json({ message: "Email already registered" });
+      // Mongoose validation failure
+      if (err.name === "ValidationError") {
+        const msg = Object.values(err.errors).map((e) => e.message).join(", ");
+        return res.status(400).json({ message: msg });
+      }
+      throw err; // Re-throw unexpected errors to the global error handler
+    }
   }
 
   const exists = memoryUsers.find((user) => user.email === email.toLowerCase());

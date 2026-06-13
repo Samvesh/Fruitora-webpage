@@ -15,6 +15,9 @@ const app = express();
 const port = env.port;
 const allowedOrigins = env.clientUrl.split(",").map((origin) => origin.trim()).filter(Boolean);
 
+// Trust the first proxy (required on Render/Heroku/etc.) — fixes ERR_ERL_UNEXPECTED_X_FORWARDED_FOR
+app.set("trust proxy", 1);
+
 validateEnv();
 await connectDB();
 

@@ -11,7 +11,9 @@ export const protect = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || "development-secret-change-me");
     if (isMongoReady()) {
-      req.user = await User.findById(decoded.id).select("-password");
+      const user = await User.findById(decoded.id).select("-password");
+      if (!user) return res.status(401).json({ message: "User no longer exists" });
+      req.user = user;
     } else {
       req.user = decoded;
     }
