@@ -5,6 +5,9 @@ import { api } from "../api";
 import LoadingScreen from "../components/LoadingScreen";
 import PageTransition from "../components/PageTransition";
 import { indiaRecognizedWorldGeo, layerColors, mapCountryStyle, toFruitMapMarkers } from "../data/geoMapData";
+import indiaStatesGeo from "../data/india_states.json";
+import indiaCountryOutlineGeo from "../data/india_country_simplified.json";
+
 
 export default function MapsPage() {
   const [payload, setPayload] = useState(null);
@@ -54,6 +57,31 @@ export default function MapsPage() {
         </div>
         <MapContainer center={[20, 20]} zoom={2} minZoom={2} maxZoom={6} scrollWheelZoom className="h-[660px] w-full rounded-[2rem]">
           <GeoJSON data={indiaRecognizedWorldGeo} style={mapCountryStyle} />
+          
+          {/* Detailed correct India states layer with dotted borders */}
+          <GeoJSON 
+            data={indiaStatesGeo} 
+            interactive={false}
+            style={{
+              color: "rgba(226, 232, 240, 0.22)",
+              weight: 0.75,
+              dashArray: "3, 4",
+              fillColor: "rgba(15, 23, 42, 0.72)",
+              fillOpacity: 1
+            }} 
+          />
+          
+          {/* Detailed correct India solid outer boundary */}
+          <GeoJSON 
+            data={indiaCountryOutlineGeo} 
+            interactive={false}
+            style={{
+              color: "rgba(226, 232, 240, 0.6)",
+              weight: 1.5,
+              fillOpacity: 0
+            }} 
+          />
+
           {markers.map((marker) => (
             <CircleMarker
               key={`${marker.slug}-${marker.layer}-${marker.country}`}
