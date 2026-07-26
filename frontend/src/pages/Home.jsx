@@ -2,26 +2,55 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Brain, Globe2, Search, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../api";
+import { api, fetchWithRetry, prewarmBackend } from "../api";
 import FruitCard from "../components/FruitCard";
 import FruitImage from "../components/FruitImage";
-import LoadingScreen from "../components/LoadingScreen";
+import SkeletonFruitCard from "../components/SkeletonFruitCard";
 import PageTransition from "../components/PageTransition";
 import { fallbackFruits } from "../data/fallback";
+import { getCachedFruits, isCacheValid, setCachedFruits } from "../data/fruitCache";
+
+const CACHE_KEY = "trending";
 
 export default function Home() {
-  const [fruits, setFruits] = useState([]);
+  const [fruits, setFruits] = useState(() => getCachedFruits(CACHE_KEY) || []);
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true);
+  // 'idle' = haven't started | 'loading' = in flight | 'success' = fetched | 'failed' = retries exhausted
+  const [fetchStatus, setFetchStatus] = useState("idle");
   const { scrollYProgress } = useScroll();
   const heroY = useTransform(scrollYProgress, [0, 0.35], [0, 130]);
   const heroScale = useTransform(scrollYProgress, [0, 0.35], [1, 0.92]);
 
   useEffect(() => {
-    api.get("/fruits/trending")
-      .then(({ data }) => setFruits(Array.isArray(data?.fruits) ? data.fruits : fallbackFruits))
-      .catch(() => setFruits(fallbackFruits))
-      .finally(() => setLoading(false));
+    // 1. Fire pre-warm immediately to wake Render backend
+    prewarmBackend();
+
+    // 2. If we already have valid cached data, skip showing skeletons
+    const hasCachedData = fruits.length > 0;
+    if (!hasCachedData) {
+      setFetchStatus("loading");
+    }
+
+    // 3. Fetch with retry (2 retries, 2s exponential backoff)
+    fetchWithRetry(() => api.get("/fruits/trending"), 2, 2000)
+      .then(({ data }) => {
+        const fetched = Array.isArray(data?.fruits) ? data.fruits : [];
+        if (fetched.length > 0) {
+          setFruits(fetched);
+          setCachedFruits(CACHE_KEY, fetched);
+          setFetchStatus("success");
+        } else {
+          // API returned empty — use fallback only if we have nothing cached
+          if (!hasCachedData) setFruits(fallbackFruits);
+          setFetchStatus("success");
+        }
+      })
+      .catch(() => {
+        // All retries exhausted — use fallback only if we have nothing cached
+        if (!hasCachedData) setFruits(fallbackFruits);
+        setFetchStatus("failed");
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filtered = useMemo(() => {
@@ -29,7 +58,8 @@ export default function Home() {
     return fruits.filter((fruit) => fruit.name.toLowerCase().includes(query.toLowerCase()));
   }, [fruits, query]);
 
-  if (loading) return <LoadingScreen />;
+  // Show skeletons only when loading with NO cached data to display
+  const showSkeletons = fetchStatus === "loading" && fruits.length === 0;
 
   return (
     <PageTransition>
@@ -84,7 +114,11 @@ export default function Home() {
                 <FruitImage src={fruit.image} alt={fruit.name} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/52">{fruit.nutrition?.calories ?? "No verified live data available"} kcal</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/52">
+                    {fetchStatus === "loading" && !fruit.nutrition?.calories
+                      ? "Loading..."
+                      : `${fruit.nutrition?.calories ?? fruit.calories ?? "—"} kcal`}
+                  </p>
                   <h2 className="font-display text-3xl font-bold">{fruit.name}</h2>
                 </div>
               </motion.div>
@@ -104,7 +138,9 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((fruit, index) => <FruitCard key={fruit.slug} fruit={fruit} index={index} />)}
+          {showSkeletons
+            ? Array.from({ length: 6 }).map((_, i) => <SkeletonFruitCard key={i} index={i} />)
+            : filtered.map((fruit, index) => <FruitCard key={fruit.slug} fruit={fruit} index={index} />)}
         </div>
       </section>
 
