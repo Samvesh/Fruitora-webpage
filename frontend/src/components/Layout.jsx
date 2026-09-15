@@ -1,87 +1,182 @@
-import { Apple, BarChart3, Compass, History, LogIn, Map, Menu, Sparkles, Utensils, X } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, LogOut, Menu, Search, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const nav = [
-  { to: "/", label: "Home", icon: Apple },
-  { to: "/history", label: "History", icon: History },
-  { to: "/maps", label: "Maps", icon: Map },
-  { to: "/recipes", label: "Recipes", icon: Utensils },
-  { to: "/recommendations", label: "Health AI", icon: Compass },
-  { to: "/analytics", label: "Analytics", icon: BarChart3 }
+const navItems = [
+  { to: "/", label: "Home" },
+  { to: "/history", label: "History" },
+  { to: "/recipes", label: "Recipes" },
+  { to: "/recommendations", label: "Health AI" },
+  { to: "/analytics", label: "Analytics" }
 ];
 
 export default function Layout({ children }) {
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   return (
-    <>
-      <motion.header
-        initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className="fixed left-0 right-0 top-0 z-50 px-4 py-4"
-      >
-        <nav className="glass mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-3">
-          <Link to="/" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-night shadow-glow">
-              <Sparkles size={19} />
+    <div className="min-h-screen bg-[#F7F6F1] text-[#141814] flex flex-col font-sans">
+      {/* Top Navbar */}
+      <header className="sticky top-0 z-50 bg-[#F7F6F1]/95 backdrop-blur-md px-6 sm:px-10 lg:px-14 py-4 border-b border-[#EBE8DF]/80">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4">
+          {/* Logo Wordmark */}
+          <Link to="/" className="flex items-center gap-2 group shrink-0">
+            <span className="text-2xl sm:text-[26px] font-extrabold tracking-tight text-[#141814] transition group-hover:opacity-85">
+              Fruitoria
             </span>
-            <span className="font-display text-2xl font-bold tracking-normal">Fruitora</span>
           </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
-            {nav.map(({ to, label, icon: Icon }) => (
+          {/* Desktop Nav Links */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            {navItems.map(({ to, label }) => (
               <NavLink
                 key={to}
                 to={to}
+                end={to === "/"}
                 className={({ isActive }) =>
-                  `flex items-center gap-2 rounded-full px-4 py-2 text-sm transition ${
-                    isActive ? "bg-white text-night" : "text-white/72 hover:bg-white/10 hover:text-white"
+                  `px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? "bg-[#E2ECDC] text-[#1F3D1F] font-semibold"
+                      : "text-[#555E53] hover:text-[#141814] hover:bg-[#EBECE5]/60"
                   }`
                 }
               >
-                <Icon size={15} />
                 {label}
               </NavLink>
             ))}
-          </div>
+          </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          {/* Search bar & Login Button */}
+          <div className="hidden md:flex items-center gap-3 shrink-0">
+            <form onSubmit={handleSearchSubmit} className="relative">
+              <div className="flex items-center gap-2 bg-[#EBEAE4] hover:bg-[#E5E4DC] focus-within:bg-white focus-within:ring-2 focus-within:ring-[#1F3D1F]/20 rounded-full px-3.5 py-1.5 transition-all w-48 xl:w-56">
+                <Search size={16} className="text-[#7C8579] shrink-0" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search fruits..."
+                  className="w-full bg-transparent text-sm text-[#141814] placeholder:text-[#8C9589] outline-none"
+                />
+              </div>
+            </form>
+
             {user ? (
-              <>
-                <span className="text-sm text-white/70">{user.name}</span>
-                <button className="rounded-full bg-white/10 px-4 py-2 text-sm text-white transition hover:bg-white/18" onClick={logout}>
-                  Sign out
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold text-[#1F3D1F] bg-[#E2ECDC] px-3 py-1 rounded-full">
+                  {user.name}
+                </span>
+                <button
+                  onClick={logout}
+                  className="rounded-full p-2 text-[#555E53] hover:text-[#1F3D1F] hover:bg-[#EBECE5] transition"
+                  title="Sign out"
+                >
+                  <LogOut size={16} />
                 </button>
-              </>
+              </div>
             ) : (
-              <Link className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-night" to="/auth/login">
-                <LogIn size={16} />
-                Login
+              <Link
+                to="/auth/login"
+                className="inline-flex items-center gap-2 rounded-full bg-[#1F3D1F] hover:bg-[#162E16] text-white px-5 py-2 text-sm font-medium shadow-sm transition-all duration-200 hover:shadow"
+              >
+                <span>Login</span>
+                <ArrowRight size={15} />
               </Link>
             )}
           </div>
 
-          <button className="grid h-10 w-10 place-items-center rounded-full bg-white/10 lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="Open navigation">
-            {open ? <X size={19} /> : <Menu size={19} />}
-          </button>
-        </nav>
-        {open && (
-          <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="glass mx-auto mt-3 grid max-w-7xl gap-2 rounded-3xl p-3 lg:hidden">
-            {nav.map(({ to, label, icon: Icon }) => (
-              <NavLink key={to} to={to} onClick={() => setOpen(false)} className="flex items-center gap-2 rounded-2xl px-4 py-3 text-white/80">
-                <Icon size={16} />
-                {label}
-              </NavLink>
-            ))}
-          </motion.div>
-        )}
-      </motion.header>
+          {/* Mobile Menu Button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-full bg-[#EBEAE4] text-[#141814] hover:bg-[#E2E1D8] transition"
+              aria-label="Toggle navigation"
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </div>
 
-      <main className="min-h-screen pt-24">{children}</main>
-    </>
+        {/* Mobile Dropdown */}
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden mt-3 pt-3 border-t border-[#E8E6DC] flex flex-col gap-2 overflow-hidden"
+            >
+              <form onSubmit={handleSearchSubmit} className="mb-2">
+                <div className="flex items-center gap-2 bg-[#EBEAE4] rounded-full px-3.5 py-2">
+                  <Search size={16} className="text-[#7C8579]" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search fruits..."
+                    className="w-full bg-transparent text-sm text-[#141814] outline-none"
+                  />
+                </div>
+              </form>
+
+              {navItems.map(({ to, label }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={to === "/"}
+                  onClick={() => setMobileOpen(false)}
+                  className={({ isActive }) =>
+                    `px-4 py-2.5 rounded-xl text-sm font-medium transition ${
+                      isActive
+                        ? "bg-[#E2ECDC] text-[#1F3D1F] font-semibold"
+                        : "text-[#555E53] hover:bg-[#EBECE5]"
+                    }`
+                  }
+                >
+                  {label}
+                </NavLink>
+              ))}
+
+              <div className="pt-2">
+                {user ? (
+                  <button
+                    onClick={() => {
+                      logout();
+                      setMobileOpen(false);
+                    }}
+                    className="w-full text-left px-4 py-2.5 text-sm font-medium text-red-600 rounded-xl hover:bg-red-50"
+                  >
+                    Sign out ({user.name})
+                  </button>
+                ) : (
+                  <Link
+                    to="/auth/login"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center justify-center gap-2 rounded-full bg-[#1F3D1F] text-white py-2.5 text-sm font-medium"
+                  >
+                    <span>Login</span>
+                    <ArrowRight size={15} />
+                  </Link>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+
+      {/* Main Page Content */}
+      <main className="flex-1 w-full">{children}</main>
+    </div>
   );
 }

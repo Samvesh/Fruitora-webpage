@@ -27,13 +27,18 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const updateUser = (nextUser) => {
+    localStorage.setItem("fruitora_user", JSON.stringify(nextUser));
+    setUser(nextUser);
+  };
+
   const logout = () => {
     localStorage.removeItem("fruitora_user");
     localStorage.removeItem("fruitora_token");
     setUser(null);
   };
 
-  const value = useMemo(() => ({ user, login, register, logout }), [user]);
+  const value = useMemo(() => ({ user, login, register, logout, updateUser }), [user]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

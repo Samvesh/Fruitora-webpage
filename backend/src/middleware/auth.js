@@ -27,3 +27,32 @@ export const adminOnly = (req, res, next) => {
   if (req.user?.role !== "admin") return res.status(403).json({ message: "Admin access required" });
   return next();
 };
+
+/**
+ * Optional authentication middleware
+ * Attaches req.user if a valid token is provided, but allows guests through with req.user = null
+ */
+export const optionalAuth = async (req, res, next) => {
+  const header = req.headers.authorization || "";
+  const token = header.startsWith("Bearer ") ? header.slice(7) : null;
+
+  if (!token) {
+    req.user = null;
+    return next();
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || "development-secret-change-me");
+    if (isMongoReady()) {
+      const user = await User.findById(decoded.id).select("-password");
+      req.user = user || null;
+    } else {
+      req.user = decoded;
+    }
+  } catch {
+    req.user = null;
+  }
+
+  return next();
+};
+

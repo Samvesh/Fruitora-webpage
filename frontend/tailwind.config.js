@@ -4,20 +4,32 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Playfair Display", "serif"]
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "sans-serif"],
+        display: ["Inter", "sans-serif"]
       },
       colors: {
+        cream: "#F7F6F1",
+        "fruitora-bg": "#F7F6F1",
+        "fruitora-dark": "#141814",
+        "fruitora-forest": "#1F3D1F",
+        "fruitora-forest-hover": "#162E16",
+        "fruitora-sage": "#E2ECDC",
+        "fruitora-sage-card": "#E1EAD9",
+        "fruitora-muted": "#687066",
+        "fruitora-subtle": "#8C9388",
         night: "#05060f",
         ink: "#11131f",
         mist: "rgba(255,255,255,0.72)"
       },
-      boxShadow: {
-        glow: "0 0 70px rgba(255, 88, 171, 0.22)",
-        aura: "0 30px 100px rgba(0,0,0,0.45)"
+      borderRadius: {
+        '2xl': '1.25rem',
+        '3xl': '1.75rem',
+        '4xl': '2.25rem'
       },
-      backgroundImage: {
-        "radial-stage": "radial-gradient(circle at top left, rgba(255, 184, 3, .24), transparent 28%), radial-gradient(circle at 70% 10%, rgba(91, 124, 250, .24), transparent 32%), radial-gradient(circle at 50% 85%, rgba(255, 79, 216, .18), transparent 35%)"
+      boxShadow: {
+        glow: "0 0 70px rgba(31, 61, 31, 0.12)",
+        aura: "0 20px 60px rgba(0,0,0,0.06)",
+        card: "0 10px 30px rgba(0,0,0,0.04)"
       }
     }
   },

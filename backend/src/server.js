@@ -10,6 +10,7 @@ import { analyticsRoutes } from "./routes/analyticsRoutes.js";
 import { authRoutes } from "./routes/authRoutes.js";
 import { fruitRoutes } from "./routes/fruitRoutes.js";
 import { recommendationRoutes } from "./routes/recommendationRoutes.js";
+import { aiRoutes } from "./routes/aiRoutes.js";
 
 const app = express();
 const port = env.port;
@@ -41,9 +42,12 @@ app.use("/api/auth", authRoutes);
 app.use("/api/fruits", fruitRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/analytics", analyticsRoutes);
+app.use("/api/ai", aiRoutes);
 
 app.use((req, res) => res.status(404).json({ message: `Route not found: ${req.method} ${req.originalUrl}` }));
-app.use((error, _req, res, _next) => {
+app.use((error, _req, res, next) => {
+  // Keep Express's four-argument error-handler signature.
+  void next;
   console.error(error);
   res.status(error.status || 500).json({ message: error.message || "Server error" });
 });

@@ -7,9 +7,19 @@ const loadFruits = async () => (isMongoReady() ? Fruit.find().lean() : fruits);
 const loadRecipes = async () => (isMongoReady() ? Recipe.find().lean() : recipes);
 
 export const recipeRecommendations = async (req, res) => {
-  const { diet = "", region = "", allergies = "" } = req.query;
+  const { diet = "", region = "", allergies = "", fruit = "" } = req.query;
   const allergyList = allergies.split(",").map((item) => item.trim().toLowerCase()).filter(Boolean);
-  const data = await loadRecipes();
+  let data = await loadRecipes();
+
+  if (fruit && fruit.trim()) {
+    const needle = fruit.trim().toLowerCase();
+    data = data.filter(
+      (recipe) =>
+        recipe.fruitSlugs?.some((s) => s.toLowerCase().includes(needle)) ||
+        recipe.title?.toLowerCase().includes(needle) ||
+        recipe.ingredients?.some((i) => i.toLowerCase().includes(needle))
+    );
+  }
 
   const scored = data.map((recipe) => {
     let score = 50;

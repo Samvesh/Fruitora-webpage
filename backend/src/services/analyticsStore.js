@@ -1,12 +1,31 @@
-const memorySearches = [];
+const memorySearches = [
+  { query: "kiwi", region: "India", resultCount: 1, createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString() },
+  { query: "mango", region: "India", resultCount: 1, createdAt: new Date(Date.now() - 1000 * 60 * 120).toISOString() },
+  { query: "avocado", region: "Global", resultCount: 1, createdAt: new Date(Date.now() - 1000 * 60 * 240).toISOString() }
+];
 
-export const recordMemorySearch = ({ query, region, resultCount }) => {
+export const recordMemorySearch = ({ query, region, resultCount, userId }) => {
   memorySearches.push({
     query,
+    userId: userId || null,
     region: region || "Unknown",
-    resultCount,
+    resultCount: resultCount || 1,
     createdAt: new Date().toISOString()
   });
+};
+
+export const getRecentMemorySearches = (limit = 8) => {
+  const seen = new Set();
+  const list = [];
+  for (let i = memorySearches.length - 1; i >= 0; i--) {
+    const q = memorySearches[i].query;
+    if (q && !seen.has(q.toLowerCase())) {
+      seen.add(q.toLowerCase());
+      list.push(q);
+      if (list.length >= limit) break;
+    }
+  }
+  return list;
 };
 
 export const getMemoryAnalytics = () => {

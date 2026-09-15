@@ -4,7 +4,7 @@ Fruitora is a premium full stack fruit nutrition platform with a cinematic React
 
 ## Tech Stack
 
-- Frontend: React, Vite, Tailwind CSS, Framer Motion, Chart.js, Leaflet
+- Frontend: React, Vite, Tailwind CSS, Framer Motion, Chart.js
 - Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt
 - Architecture: REST API, cache wrappers, retrying API fetches, protected user profile routes, admin analytics route
 
@@ -45,7 +45,6 @@ The API works without MongoDB by using in-memory fruit knowledge and current-ses
 - Nutrition: live lookup uses USDA FoodData Central. The included `.env.example` uses `DEMO_KEY`, which is useful for testing but has low public rate limits. Get a real key for production.
 - Trends: Google Trends API access is currently alpha/controlled. Fruitora supports a configurable `GOOGLE_TRENDS_API_URL`, but displays an unavailable state instead of fake trend scores when no authorized endpoint is configured.
 - Analytics: dashboard totals come from MongoDB search/user events, or current server-session events if MongoDB is not connected. It does not display made-up users, searches, recipe views, or health trend percentages.
-- Maps: Leaflet renders real geographic map tiles with borders. For India-recognized boundary compliance, configure `VITE_MAP_TILE_URL` to an approved tile provider used by your deployment policy.
 - Static/cached knowledge: recipes, varieties, storage, safety guidance, cultural history, and biology are bundled because these change slowly. Expand these profiles with reviewed sources before medical or commercial claims.
 
 ## Seed MongoDB
@@ -71,7 +70,6 @@ password: AdminPass123
 - `GET /api/fruits/trending`
 - `GET /api/fruits/:slug`
 - `GET /api/fruits/history`
-- `GET /api/fruits/maps/production`
 - `GET /api/recommendations/recipes`
 - `POST /api/recommendations/health`
 - `GET /api/analytics/overview`

@@ -1,12 +1,11 @@
-@import "leaflet/dist/leaflet.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  background: #05060f;
-  color: #f8fafc;
+  color-scheme: light;
+  background: #F7F6F1;
+  color: #141814;
 }
 
 * {
@@ -22,34 +21,23 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 12% 20%, rgba(255, 183, 3, 0.18), transparent 28%),
-    radial-gradient(circle at 86% 8%, rgba(91, 124, 250, 0.2), transparent 30%),
-    radial-gradient(circle at 62% 78%, rgba(255, 79, 216, 0.16), transparent 32%),
-    #05060f;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: linear-gradient(to bottom, black, transparent 82%);
-  z-index: 0;
+  background-color: #F7F6F1;
+  color: #141814;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
   position: relative;
   z-index: 1;
+  background-color: #F7F6F1;
+  min-height: 100vh;
 }
 
 ::selection {
-  color: #05060f;
-  background: #ffcf56;
+  color: #ffffff;
+  background: #1F3D1F;
 }
 
 .glass {
@@ -83,28 +71,6 @@ body::before {
 .orb {
   filter: blur(16px);
   opacity: 0.78;
-}
-
-.map-marker {
-  filter: drop-shadow(0 0 18px rgba(255,255,255,.5));
-}
-
-.leaflet-container {
-  background: #070914;
-  font-family: Inter, system-ui, sans-serif;
-}
-
-.leaflet-tile {
-  filter: invert(1) hue-rotate(180deg) saturate(0.75) brightness(0.72) contrast(1.1);
-}
-
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-  background: rgba(7, 9, 20, 0.92);
-  color: white;
-  border: 1px solid rgba(255,255,255,.14);
-  box-shadow: 0 22px 70px rgba(0,0,0,.4);
-  backdrop-filter: blur(18px);
 }
 
 .page-shell {

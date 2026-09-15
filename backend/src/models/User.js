@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 const healthProfileSchema = new mongoose.Schema(
   {
     age: Number,
+    weightKg: Number,
+    heightCm: Number,
     region: String,
     allergies: [String],
     healthConditions: [String],

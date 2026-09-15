@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { AlertTriangle, Archive, Beaker, CalendarDays, Clock, HeartPulse, Leaf, MapPin, Pill, Sparkles, Utensils } from "lucide-react";
+import { AlertTriangle, Archive, Beaker, CalendarDays, Clock, Globe2, HeartPulse, Leaf, MapPin, Pill, Sparkles, Utensils } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { CircleMarker, GeoJSON, MapContainer, Popup } from "react-leaflet";
 import { useParams } from "react-router-dom";
 import { api } from "../api";
 import FruitImage from "../components/FruitImage";
@@ -9,7 +8,6 @@ import LoadingScreen from "../components/LoadingScreen";
 import { MacroRadar } from "../components/NutritionChart";
 import PageTransition from "../components/PageTransition";
 import { fallbackFruits } from "../data/fallback";
-import { countryCoordinates, indiaRecognizedWorldGeo, layerColors, mapCountryStyle } from "../data/geoMapData";
 
 const cleanNutrition = (fruit) => {
   const live = fruit.liveNutrition?.nutrients || {};
@@ -40,14 +38,6 @@ export default function FruitDetail() {
   }, [slug]);
 
   const nutrition = useMemo(() => (fruit ? cleanNutrition(fruit) : {}), [fruit]);
-  const mapMarkers = useMemo(() => {
-    if (!fruit) return [];
-    return [
-      ...(fruit.productionRegions || []).map((country) => ({ country, type: "Production" })),
-      ...(fruit.exportRegions || []).map((country) => ({ country, type: "Export" })),
-      ...(fruit.importRegions || []).map((country) => ({ country, type: "Import" }))
-    ].map((item) => ({ ...item, point: countryCoordinates[item.country] })).filter((item) => item.point);
-  }, [fruit]);
 
   if (!fruit) return <LoadingScreen />;
 
@@ -139,20 +129,73 @@ export default function FruitDetail() {
           </div>
         </div>
 
-        <div className="glass overflow-hidden rounded-[2rem] p-3">
-          <div className="mb-3 flex flex-wrap gap-3 px-2 text-sm text-white/70">
-            <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-emerald-400" />Growing regions</span>
-            <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-blue-400" />Export destinations</span>
-            <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-orange-400" />Import dependency</span>
+        <div className="glass rounded-[2rem] p-6 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center gap-2 text-amber-200 mb-2">
+              <Globe2 size={20} />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold">Geographic Distribution</span>
+            </div>
+            <h2 className="text-3xl font-black">Global Origin & Trade</h2>
+            <p className="mt-2 text-sm text-white/60">Agricultural cultivation centers and international trade flows for {fruit.name}.</p>
+
+            <div className="mt-6 space-y-5">
+              {/* Growing Regions */}
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2 mb-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                  Primary Growing Regions
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {(fruit.productionRegions?.length ? fruit.productionRegions : ["Global temperate/tropical regions"]).map((region) => (
+                    <span key={region} className="rounded-xl bg-emerald-500/15 border border-emerald-500/30 px-3 py-1.5 text-xs font-semibold text-emerald-200">
+                      {region}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Export Destinations */}
+              {fruit.exportRegions?.length > 0 && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-blue-400 flex items-center gap-2 mb-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-400" />
+                    Major Export Markets
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {fruit.exportRegions.map((region) => (
+                      <span key={region} className="rounded-xl bg-blue-500/15 border border-blue-500/30 px-3 py-1.5 text-xs font-semibold text-blue-200">
+                        {region}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Import Dependency */}
+              {fruit.importRegions?.length > 0 && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-orange-400 flex items-center gap-2 mb-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-orange-400" />
+                    Key Import Destinations
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {fruit.importRegions.map((region) => (
+                      <span key={region} className="rounded-xl bg-orange-500/15 border border-orange-500/30 px-3 py-1.5 text-xs font-semibold text-orange-200">
+                        {region}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-          <MapContainer center={[20, 40]} zoom={2} minZoom={2} maxZoom={6} scrollWheelZoom className="h-[560px] w-full rounded-[1.5rem]">
-            <GeoJSON data={indiaRecognizedWorldGeo} style={mapCountryStyle} />
-            {mapMarkers.map((marker) => (
-              <CircleMarker key={`${marker.type}-${marker.country}`} center={marker.point} radius={marker.type === "Production" ? 12 : 8} pathOptions={{ color: layerColors[marker.type], fillColor: layerColors[marker.type], fillOpacity: 0.48, weight: 2 }}>
-                <Popup>{fruit.name}<br />{marker.type}: {marker.country}</Popup>
-              </CircleMarker>
-            ))}
-          </MapContainer>
+
+          {fruit.originRegions?.length > 0 && (
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
+              <span>Historical Origin:</span>
+              <span className="font-semibold text-white/80">{fruit.originRegions.join(", ")}</span>
+            </div>
+          )}
         </div>
       </section>
 

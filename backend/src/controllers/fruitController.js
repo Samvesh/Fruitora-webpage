@@ -107,32 +107,3 @@ export const history = async (_req, res) => {
     }))
   });
 };
-
-export const mapData = async (_req, res) => {
-  const data = await fruitSource();
-  return res.json({
-    fruits: data.map((fruit) => ({
-      slug: fruit.slug,
-      name: fruit.name,
-      color: fruit.color,
-      originRegions: fruit.originRegions,
-      productionRegions: fruit.productionRegions,
-      exportRegions: fruit.exportRegions,
-      importRegions: fruit.importRegions,
-      climateZones: fruit.climateZones
-    })),
-    regions: data.flatMap((fruit) =>
-      (fruit.productionRegions || []).map((country) => ({
-        country,
-        value: null,
-        metric: "production-zone",
-        fruit: fruit.name,
-        slug: fruit.slug,
-        color: fruit.color,
-        climate: fruit.climateZones,
-        source: "No verified live data available"
-      }))
-    ),
-    sources: sourceNotes
-  });
-};

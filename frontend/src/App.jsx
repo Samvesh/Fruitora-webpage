@@ -9,7 +9,6 @@ const AuthPage = lazy(() => import("./pages/AuthPage"));
 const FruitDetail = lazy(() => import("./pages/FruitDetail"));
 const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const Home = lazy(() => import("./pages/Home"));
-const MapsPage = lazy(() => import("./pages/MapsPage"));
 const RecommendationsPage = lazy(() => import("./pages/RecommendationsPage"));
 const RecipesPage = lazy(() => import("./pages/RecipesPage"));
 
@@ -24,7 +23,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/fruit/:slug" element={<FruitDetail />} />
             <Route path="/history" element={<HistoryPage />} />
-            <Route path="/maps" element={<MapsPage />} />
             <Route path="/recipes" element={<RecipesPage />} />
             <Route path="/recommendations" element={<RecommendationsPage />} />
             <Route path="/analytics" element={<AdminDashboard />} />

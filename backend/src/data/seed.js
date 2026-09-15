@@ -13,6 +13,18 @@ if (!process.env.MONGODB_URI) {
   process.exit(1);
 }
 
+const requiredSeedEnv = (name) => {
+  const value = process.env[name];
+  if (!value) {
+    console.error(`[seed] ERROR: ${name} environment variable is not set.`);
+    process.exit(1);
+  }
+  return value;
+};
+
+const adminEmail = requiredSeedEnv("SEED_ADMIN_EMAIL").toLowerCase();
+const adminPassword = requiredSeedEnv("SEED_ADMIN_PASSWORD");
+
 const run = async () => {
   const connected = await connectDB();
   if (!connected) {
@@ -28,7 +40,6 @@ const run = async () => {
   console.log(`[seed] Inserted ${fruits.length} fruits and ${recipes.length} recipes.`);
 
   // --- Admin user: upsert so re-running never creates a duplicate ---
-  const adminEmail = "admin@fruitora.app";
   const existing = await User.findOne({ email: adminEmail });
 
   if (existing) {
@@ -38,11 +49,11 @@ const run = async () => {
     await User.create({
       name: "Admin",
       email: adminEmail,
-      password: "AdminPass123",
+      password: adminPassword,
       role: "admin",
       region: "Global"
     });
-    console.log(`[seed] Admin user created: ${adminEmail} / AdminPass123`);
+    console.log(`[seed] Admin user created: ${adminEmail}`);
   }
 
   console.log("[seed] Done.");
@@ -54,4 +65,3 @@ run()
     process.exit(1);
   })
   .finally(() => mongoose.connection.close());
-

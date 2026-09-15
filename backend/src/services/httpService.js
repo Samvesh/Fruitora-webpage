@@ -4,7 +4,7 @@ export const fetchJson = async (url, options = {}, retries = 2) => {
     try {
       const response = await fetch(url, {
         ...options,
-        headers: { accept: "application/json", ...(options.headers || {}) }
+        headers: { accept: "application/json", ...options.headers }
       });
       if (response.status === 429) throw new Error("Remote API rate limit reached");
       if (!response.ok) throw new Error(`Remote API error ${response.status}`);
