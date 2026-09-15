@@ -58,7 +58,7 @@ export default function HistoryPage() {
                 <div className="rounded-3xl bg-white/7 p-5 md:col-span-2">
                   <Landmark className="text-amber-200" />
                   <p className="mt-3 text-sm text-white/48">Cultural significance</p>
-                  <p className="mt-1 leading-7 text-white/70">{fruit.culture}</p>
+                  <p className="mt-1 leading-7 text-[#141814]">{fruit.culture}</p>
                 </div>
               </div>
               <div className="mt-6 grid gap-4">
