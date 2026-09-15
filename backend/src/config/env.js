@@ -1,16 +1,7 @@
-const requiredOnStartup = [
-  "DEMO_USER_EMAIL",
-  "DEMO_USER_PASSWORD",
-  "SEED_ADMIN_EMAIL",
-  "SEED_ADMIN_PASSWORD"
-];
 const requiredInProduction = ["JWT_SECRET", "CLIENT_URL"];
 
 export const validateEnv = () => {
-  const missing = [
-    ...requiredOnStartup.filter((key) => !process.env[key]),
-    ...requiredInProduction.filter((key) => process.env.NODE_ENV === "production" && !process.env[key])
-  ];
+  const missing = requiredInProduction.filter((key) => process.env.NODE_ENV === "production" && !process.env[key]);
   if (missing.length) {
     throw new Error(`Missing required environment variables: ${missing.join(", ")}`);
   }

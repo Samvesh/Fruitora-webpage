@@ -9,9 +9,7 @@ import {
   Scale,
   Ruler,
   ShieldCheck,
-  Sparkles,
-  User,
-  UserCheck
+  User
 } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -23,14 +21,6 @@ export default function AuthPage() {
   const isRegister = mode === "register";
   const navigate = useNavigate();
   const { login, register } = useAuth();
-  const demoLoginEnabled = import.meta.env.VITE_ENABLE_DEMO_LOGIN === "true";
-  const demoEmail = import.meta.env.VITE_DEMO_EMAIL;
-  const demoPassword = import.meta.env.VITE_DEMO_PASSWORD;
-
-  if (demoLoginEnabled && (!demoEmail || !demoPassword)) {
-    throw new Error("VITE_DEMO_EMAIL and VITE_DEMO_PASSWORD must be set when demo login is enabled.");
-  }
-
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -82,23 +72,6 @@ export default function AuthPage() {
     }
   };
 
-  // 1-Click Demo Login Handler
-  const handleDemoLogin = async () => {
-    setError("");
-    setLoading(true);
-    try {
-      await login({
-        email: demoEmail,
-        password: demoPassword
-      });
-      navigate("/");
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to log in with demo account.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <PageTransition>
       <div className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 lg:px-14 py-8 lg:py-14 min-h-[calc(100vh-100px)] flex items-center justify-center">
@@ -139,28 +112,6 @@ export default function AuthPage() {
               </div>
             </div>
 
-            {demoLoginEnabled && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-[#E2ECDC] border border-[#D5E1CE] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
-                <div>
-                  <div className="flex items-center gap-2 text-xs font-bold text-[#1F3D1F] uppercase tracking-wider">
-                    <Sparkles size={13} />
-                    <span>Instant Demo Account</span>
-                  </div>
-                  <p className="text-xs text-[#52604F] mt-0.5">
-                    Test with pre-filled metrics (Alex Morgan, 68kg, 175cm, India)
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleDemoLogin}
-                  disabled={loading}
-                  className="shrink-0 flex items-center gap-2 px-4 py-2 rounded-full bg-[#1F3D1F] hover:bg-[#162E16] text-white text-xs font-bold shadow-xs transition"
-                >
-                  <UserCheck size={14} />
-                  <span>1-Click Demo Login</span>
-                </button>
-              </div>
-            )}
           </div>
 
           {/* Right Column: Authentication Card */}

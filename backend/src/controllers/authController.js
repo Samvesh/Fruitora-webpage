@@ -5,40 +5,7 @@ import { User } from "../models/User.js";
 import { getRecentMemorySearches } from "../services/analyticsStore.js";
 import { signToken } from "../utils/tokens.js";
 
-const requiredDemoEnv = (name) => {
-  const value = process.env[name];
-  if (!value) throw new Error(`${name} must be set to start the API demo account.`);
-  return value;
-};
-
-const demoEmail = requiredDemoEnv("DEMO_USER_EMAIL").toLowerCase();
-const demoPassword = requiredDemoEnv("DEMO_USER_PASSWORD");
-const DEMO_PASSWORD_HASH = bcrypt.hashSync(demoPassword, 10);
-
-const memoryUsers = [
-  {
-    id: "demo-user-1",
-    name: "Alex Morgan",
-    email: demoEmail,
-    password: DEMO_PASSWORD_HASH,
-    role: "user",
-    region: "Asia / India",
-    healthProfile: {
-      age: 29,
-      weightKg: 68,
-      heightCm: 175,
-      region: "Asia / India",
-      healthConditions: ["Borderline Diabetic", "Mild Hypertension"],
-      allergies: ["Latex-fruit allergy"],
-      fitnessGoals: ["Blood Sugar Balance", "Immunity", "Active Recovery"],
-      diet: "Vegetarian"
-    },
-    preferences: {
-      favoriteFruits: ["Kiwi", "Jamun", "Amla", "Apple", "Guava"],
-      dietaryStyle: "Low-Glycemic Whole Foods"
-    }
-  }
-];
+const memoryUsers = [];
 
 const publicUser = (user) => ({
   id: user._id?.toString?.() || user.id,
