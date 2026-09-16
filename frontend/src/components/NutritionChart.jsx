@@ -6,17 +6,17 @@ ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, LineElement
 const chartOptions = {
   responsive: true,
   plugins: {
-    legend: { labels: { color: "rgba(255,255,255,.7)" } }
+    legend: { labels: { color: "#556453" } }
   },
   scales: {
     r: {
-      grid: { color: "rgba(255,255,255,.1)" },
-      angleLines: { color: "rgba(255,255,255,.1)" },
-      pointLabels: { color: "rgba(255,255,255,.7)" },
+      grid: { color: "rgba(31,61,31,.12)" },
+      angleLines: { color: "rgba(31,61,31,.12)" },
+      pointLabels: { color: "#556453" },
       ticks: { display: false }
     },
-    x: { ticks: { color: "rgba(255,255,255,.55)" }, grid: { display: false } },
-    y: { ticks: { color: "rgba(255,255,255,.55)" }, grid: { color: "rgba(255,255,255,.08)" } }
+    x: { ticks: { color: "#556453" }, grid: { display: false } },
+    y: { ticks: { color: "#556453" }, grid: { color: "rgba(31,61,31,.08)" } }
   }
 };
 
@@ -28,10 +28,10 @@ export function MacroRadar({ nutrition, color = "#ffb703" }) {
       {entries.map(([label, value]) => (
         <div key={label}>
           <div className="mb-2 flex items-center justify-between text-sm">
-            <span className="capitalize text-white/62">{label}</span>
+            <span className="capitalize text-[#556453]">{label}</span>
             <span className="font-semibold">{value}</span>
           </div>
-          <div className="h-3 overflow-hidden rounded-full bg-white/10">
+          <div className="h-3 overflow-hidden rounded-full bg-[#E2E0D5]">
             <div className="h-full rounded-full" style={{ width: `${Math.max(6, (value / max) * 100)}%`, background: color }} />
           </div>
         </div>

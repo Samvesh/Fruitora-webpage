@@ -58,19 +58,19 @@ export default function FruitDetail() {
           <div className="absolute inset-0 bg-gradient-to-t from-night via-night/20 to-transparent" />
           <div className="absolute bottom-8 left-8 right-8">
             <p className="text-sm uppercase tracking-[0.28em] text-white/58">{fruit.scientificName}</p>
-            <h1 className="mt-3 font-display text-6xl font-bold sm:text-8xl">{fruit.name}</h1>
+            <h1 className="mt-3 font-display text-6xl font-bold text-white sm:text-8xl">{fruit.name}</h1>
             <p className="mt-5 max-w-xl text-lg leading-8 text-white/70">{fruit.culture}</p>
           </div>
         </div>
 
         <div className="grid content-start gap-5">
-          {error && <div className="rounded-3xl border border-red-300/20 bg-red-500/10 p-4 text-red-100">{error}</div>}
+          {error && <div className="rounded-3xl border border-red-300 bg-red-50 p-4 text-red-800">{error}</div>}
           <div className="glass rounded-[2rem] p-6">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.22em] text-white/42">Nutrition source</p>
+                <p className="text-sm uppercase tracking-[0.22em] text-[#656E62]">Nutrition source</p>
                 <h2 className="mt-2 text-2xl font-bold">{fruit.liveNutrition?.source || "Fruitora nutrition profile"}</h2>
-                <p className="mt-2 text-sm text-white/48">{fruit.liveNutrition?.description || `${fruit.name} per 100g edible portion`}</p>
+                <p className="mt-2 text-sm text-[#556453]">{fruit.liveNutrition?.description || `${fruit.name} per 100g edible portion`}</p>
               </div>
               <div className="grid h-16 w-16 place-items-center rounded-full" style={{ background: `${fruit.color}33`, color: fruit.color }}>
                 <Sparkles />
@@ -86,7 +86,7 @@ export default function FruitDetail() {
           <div className="grid grid-cols-2 gap-4">
             {Object.entries(nutrition).map(([key, value]) => (
               <motion.div whileHover={{ scale: 1.03 }} key={key} className="glass rounded-3xl p-5">
-                <p className="text-xs uppercase tracking-[0.18em] text-white/38">{key}</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-[#656E62]">{key}</p>
                 <p className="mt-2 text-3xl font-black">{value ?? "No verified live data available"}</p>
               </motion.div>
             ))}
@@ -104,11 +104,11 @@ export default function FruitDetail() {
       <section className="page-shell grid gap-5 pb-16 md:grid-cols-2">
         {panels.map(({ icon: Icon, title, list }) => (
           <motion.div key={title} whileHover={{ y: -8 }} className="glass rounded-[2rem] p-7">
-            <Icon className="text-amber-200" />
+            <Icon className="text-[#A96C00]" />
             <h3 className="mt-4 text-2xl font-bold">{title}</h3>
             <div className="mt-5 grid gap-3">
               {(list.length ? list : ["No verified live data available"]).map((item) => (
-                <p key={item} className="rounded-2xl bg-white/7 p-4 leading-7 text-white/66">{item}</p>
+                <p key={item} className="rounded-2xl bg-[#FAF9F5] p-4 leading-7 text-[#141814]">{item}</p>
               ))}
             </div>
           </motion.div>
@@ -120,10 +120,10 @@ export default function FruitDetail() {
           <h2 className="text-3xl font-black">Varieties and market identity</h2>
           <div className="mt-5 grid gap-4">
             {fruit.varieties.map((variety) => (
-              <div key={variety.name} className="rounded-3xl border border-white/10 bg-black/20 p-5">
+              <div key={variety.name} className="rounded-3xl border border-[#E8E6DD] bg-[#FAF9F5] p-5">
                 <h3 className="text-xl font-bold" style={{ color: fruit.color }}>{variety.name}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/60">{variety.taste} texture: {variety.texture || "varies"}. Region: {variety.region}. Season: {variety.season}.</p>
-                <p className="mt-2 text-sm text-white/45">{variety.uniqueness} {variety.marketValue && `Market: ${variety.marketValue}.`} {variety.exportPopularity && `Export: ${variety.exportPopularity}.`}</p>
+                <p className="mt-2 text-sm leading-6 text-[#556453]">{variety.taste} texture: {variety.texture || "varies"}. Region: {variety.region}. Season: {variety.season}.</p>
+                <p className="mt-2 text-sm text-[#656E62]">{variety.uniqueness} {variety.marketValue && `Market: ${variety.marketValue}.`} {variety.exportPopularity && `Export: ${variety.exportPopularity}.`}</p>
               </div>
             ))}
           </div>
@@ -131,12 +131,12 @@ export default function FruitDetail() {
 
         <div className="glass rounded-[2rem] p-6 flex flex-col justify-between">
           <div>
-            <div className="flex items-center gap-2 text-amber-200 mb-2">
+            <div className="flex items-center gap-2 text-[#A96C00] mb-2">
               <Globe2 size={20} />
               <span className="text-xs uppercase tracking-[0.2em] font-semibold">Geographic Distribution</span>
             </div>
             <h2 className="text-3xl font-black">Global Origin & Trade</h2>
-            <p className="mt-2 text-sm text-white/60">Agricultural cultivation centers and international trade flows for {fruit.name}.</p>
+            <p className="mt-2 text-sm text-[#556453]">Agricultural cultivation centers and international trade flows for {fruit.name}.</p>
 
             <div className="mt-6 space-y-5">
               {/* Growing Regions */}
@@ -147,7 +147,7 @@ export default function FruitDetail() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {(fruit.productionRegions?.length ? fruit.productionRegions : ["Global temperate/tropical regions"]).map((region) => (
-                    <span key={region} className="rounded-xl bg-emerald-500/15 border border-emerald-500/30 px-3 py-1.5 text-xs font-semibold text-emerald-200">
+                    <span key={region} className="rounded-xl bg-emerald-500/15 border border-emerald-500/30 px-3 py-1.5 text-xs font-semibold text-emerald-800">
                       {region}
                     </span>
                   ))}
@@ -163,7 +163,7 @@ export default function FruitDetail() {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {fruit.exportRegions.map((region) => (
-                      <span key={region} className="rounded-xl bg-blue-500/15 border border-blue-500/30 px-3 py-1.5 text-xs font-semibold text-blue-200">
+                      <span key={region} className="rounded-xl bg-blue-500/15 border border-blue-500/30 px-3 py-1.5 text-xs font-semibold text-blue-800">
                         {region}
                       </span>
                     ))}
@@ -180,7 +180,7 @@ export default function FruitDetail() {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {fruit.importRegions.map((region) => (
-                      <span key={region} className="rounded-xl bg-orange-500/15 border border-orange-500/30 px-3 py-1.5 text-xs font-semibold text-orange-200">
+                      <span key={region} className="rounded-xl bg-orange-500/15 border border-orange-500/30 px-3 py-1.5 text-xs font-semibold text-orange-800">
                         {region}
                       </span>
                     ))}
@@ -191,9 +191,9 @@ export default function FruitDetail() {
           </div>
 
           {fruit.originRegions?.length > 0 && (
-            <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
+            <div className="mt-6 pt-5 border-t border-[#E8E6DD] flex items-center justify-between text-xs text-[#656E62]">
               <span>Historical Origin:</span>
-              <span className="font-semibold text-white/80">{fruit.originRegions.join(", ")}</span>
+              <span className="font-semibold text-[#141814]">{fruit.originRegions.join(", ")}</span>
             </div>
           )}
         </div>
@@ -202,18 +202,18 @@ export default function FruitDetail() {
       <section className="page-shell pb-24">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.28em] text-amber-200">Fruit recipes</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-[#A96C00]">Fruit recipes</p>
             <h2 className="mt-3 text-4xl font-black">Traditional, modern, juice, smoothie, and meal uses</h2>
           </div>
-          <Utensils className="text-white/40" />
+          <Utensils className="text-[#656E62]" />
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {(fruit.recipes?.length ? fruit.recipes : []).map((recipe) => (
             <motion.article key={recipe.id} whileHover={{ y: -8 }} className="glass rounded-[2rem] p-6">
               <p className="text-sm uppercase tracking-[0.2em]" style={{ color: fruit.color }}>{recipe.category}</p>
               <h3 className="mt-3 text-2xl font-bold">{recipe.title}</h3>
-              <p className="mt-4 text-sm leading-6 text-white/62">{recipe.method}</p>
-              <p className="mt-4 rounded-2xl bg-white/7 p-3 text-sm text-white/52">{recipe.note}</p>
+              <p className="mt-4 text-sm leading-6 text-[#556453]">{recipe.method}</p>
+              <p className="mt-4 rounded-2xl bg-[#FAF9F5] p-3 text-sm text-[#656E62]">{recipe.note}</p>
             </motion.article>
           ))}
         </div>
@@ -225,9 +225,9 @@ export default function FruitDetail() {
 function Info({ icon: Icon, label, value }) {
   return (
     <div className="glass rounded-[2rem] p-5">
-      <Icon className="text-amber-200" />
-      <p className="mt-4 text-xs uppercase tracking-[0.18em] text-white/38">{label}</p>
-      <p className="mt-2 text-sm leading-6 text-white/70">{value || "No verified live data available"}</p>
+      <Icon className="text-[#A96C00]" />
+      <p className="mt-4 text-xs uppercase tracking-[0.18em] text-[#656E62]">{label}</p>
+      <p className="mt-2 text-sm leading-6 text-[#556453]">{value || "No verified live data available"}</p>
     </div>
   );
 }
