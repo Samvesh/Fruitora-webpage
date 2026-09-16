@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { ChefHat, Flame, Leaf, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { api } from "../api";
-import FruitImage from "../components/FruitImage";
 import LoadingScreen from "../components/LoadingScreen";
-import { preloadedRecipes } from "../data/recipesData";
 import PageTransition from "../components/PageTransition";
 
 export default function RecipesPage() {
@@ -15,8 +13,8 @@ export default function RecipesPage() {
   useEffect(() => {
     const params = new URLSearchParams(filters);
     api.get(`/recommendations/recipes?${params.toString()}`)
-      .then(({ data }) => setRecipes(data.recipes?.length ? data.recipes : preloadedRecipes))
-      .catch(() => setRecipes(preloadedRecipes));
+      .then(({ data }) => setRecipes(Array.isArray(data.recipes) ? data.recipes : []))
+      .catch(() => setRecipes([]));
   }, [filters]);
 
   const filteredRecipes = useMemo(() => {
@@ -68,43 +66,47 @@ export default function RecipesPage() {
           </div>
         </div>
 
-        <div className="grid gap-5">
-          {filteredRecipes.map((recipe, index) => (
-            <motion.article
-              key={recipe.id}
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.06 }}
-              whileHover={{ y: -8 }}
-              className="glass grid overflow-hidden rounded-[2rem] md:grid-cols-[240px_1fr]"
-            >
-              <div className="relative min-h-[230px]">
-                <FruitImage src={recipe.image} alt={recipe.title} className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute left-4 top-4 rounded-full bg-black/42 px-3 py-1 text-xs backdrop-blur-xl">{recipe.score} match</div>
-              </div>
-              <div className="p-6">
+        <div className="max-h-[600px] overflow-y-auto pr-2">
+          <div className="grid gap-5">
+            {filteredRecipes.map((recipe, index) => (
+              <motion.article
+                key={recipe.id}
+                initial={{ opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: Math.min(index, 8) * 0.06 }}
+                whileHover={{ y: -4 }}
+                className="glass rounded-[2rem] p-6"
+              >
                 <div className="flex items-center gap-2 text-[#A96C00]">
                   <ChefHat size={18} />
                   <span className="text-sm uppercase tracking-[0.2em]">Curated recipe</span>
                 </div>
                 <h2 className="mt-3 text-3xl font-black">{recipe.title}</h2>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {recipe.diet.map((item) => <span key={item} className="rounded-full bg-[#E2ECDC] px-3 py-1 text-xs text-[#1F3D1F]">{item}</span>)}
+                  {(recipe.diet || []).map((item) => <span key={item} className="rounded-full bg-[#E2ECDC] px-3 py-1 text-xs text-[#1F3D1F]">{item}</span>)}
                 </div>
-                <div className="mt-5 grid grid-cols-3 gap-2">
-                  <div className="rounded-2xl bg-[#FAF9F5] p-3"><Flame size={15} /><p className="mt-2 font-bold">{recipe.category || "Recipe"}</p><p className="text-xs text-[#656E62]">type</p></div>
-                  <div className="rounded-2xl bg-[#FAF9F5] p-3"><Leaf size={15} /><p className="mt-2 font-bold">{recipe.diet?.[0] || "balanced"}</p><p className="text-xs text-[#656E62]">diet</p></div>
-                  <div className="rounded-2xl bg-[#FAF9F5] p-3"><Search size={15} /><p className="mt-2 font-bold">{recipe.prepTime || "10 min"}</p><p className="text-xs text-[#656E62]">prep time</p></div>
+                <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                  <div className="rounded-2xl bg-[#FAF9F5] p-3"><Flame size={15} /><p className="mt-2 font-bold">{recipe.category || "Recipe"}</p><p className="text-xs text-[#656E62]">category</p></div>
+                  <div className="rounded-2xl bg-[#FAF9F5] p-3"><Leaf size={15} /><p className="mt-2 font-bold">{recipe.prepTime || "10 min"}</p><p className="text-xs text-[#656E62]">prep time</p></div>
                 </div>
-                {recipe.method && <p className="mt-4 text-sm leading-6 text-[#556453]">{recipe.method}</p>}
+                <section className="mt-5">
+                  <h3 className="font-bold">Ingredients</h3>
+                  <ul className="mt-2 grid gap-1 text-sm leading-6 text-[#556453]">
+                    {(recipe.ingredients || []).map((ingredient) => <li key={ingredient}>• {ingredient}</li>)}
+                  </ul>
+                </section>
+                <section className="mt-5">
+                  <h3 className="font-bold">Instructions</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#556453]">{recipe.instructions || recipe.method || "Instructions are coming soon."}</p>
+                </section>
+              </motion.article>
+            ))}
+            {!filteredRecipes.length && (
+              <div className="rounded-[2rem] border border-dashed border-[#D5E1CE] bg-[#FAF9F5] p-8 text-center text-[#556453]">
+                No recipes match “{search}”. Try a fruit, ingredient, or recipe type such as “mango” or “smoothie”.
               </div>
-            </motion.article>
-          ))}
-          {!filteredRecipes.length && (
-            <div className="rounded-[2rem] border border-dashed border-[#D5E1CE] bg-[#FAF9F5] p-8 text-center text-[#556453]">
-              No recipes match “{search}”. Try a fruit, ingredient, or recipe type such as “mango” or “smoothie”.
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </PageTransition>
