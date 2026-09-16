@@ -10,6 +10,7 @@ const recipeSchema = new mongoose.Schema(
     prepTime: String,
     ingredients: [String],
     method: String,
+    instructions: String,
     note: String,
     diet: [String],
     region: [String],
