@@ -19,6 +19,12 @@ const allowedOrigins = env.clientUrl.split(",").map((origin) => origin.trim()).f
 // Trust the first proxy (required on Render/Heroku/etc.) — fixes ERR_ERL_UNEXPECTED_X_FORWARDED_FOR
 app.set("trust proxy", 1);
 
+console.log(
+  "[env] GROQ_API_KEY present:",
+  Boolean(process.env.GROQ_API_KEY),
+  "length:",
+  process.env.GROQ_API_KEY?.length ?? 0
+);
 validateEnv();
 await connectDB();
 
