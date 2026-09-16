@@ -15,6 +15,13 @@ import { aiRoutes } from "./routes/aiRoutes.js";
 const app = express();
 const port = env.port;
 const allowedOrigins = env.clientUrl.split(",").map((origin) => origin.trim()).filter(Boolean);
+const vercelPreviewOrigin = /^https:\/\/fruitoria-[a-z0-9]+-samvesh-s-projects\.vercel\.app$/;
+const localhostOrigin = /^http:\/\/localhost(?::\d+)?$/;
+
+const isAllowedOrigin = (origin) =>
+  allowedOrigins.includes(origin) ||
+  vercelPreviewOrigin.test(origin) ||
+  localhostOrigin.test(origin);
 
 // Trust the first proxy (required on Render/Heroku/etc.) — fixes ERR_ERL_UNEXPECTED_X_FORWARDED_FOR
 app.set("trust proxy", 1);
@@ -31,7 +38,7 @@ await connectDB();
 app.use(helmet());
 app.use(cors({
   origin(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+    if (!origin || isAllowedOrigin(origin)) return callback(null, true);
     return callback(new Error(`CORS blocked origin: ${origin}`));
   },
   credentials: true
