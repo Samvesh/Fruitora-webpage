@@ -103,6 +103,7 @@ const recipeSet = (fruit) => [
     fruitSlugs: [fruit.slug],
     category: "Juice",
     title: `${fruit.name} Lime Cooler`,
+    prepTime: "10 min",
     image: `/recipes/${fruit.slug}-juice.jpg`,
     diet: ["vegetarian", "hydrating"],
     ingredients: [fruit.name, "lime", "mint", "chilled water", "rock salt"],
@@ -114,6 +115,7 @@ const recipeSet = (fruit) => [
     fruitSlugs: [fruit.slug],
     category: "Smoothie",
     title: `${fruit.name} Yogurt Smoothie`,
+    prepTime: "8 min",
     image: `/recipes/${fruit.slug}-smoothie.jpg`,
     diet: ["vegetarian", "protein paired"],
     ingredients: [fruit.name, "curd or yogurt", "chia seeds", "cardamom", "ice"],
@@ -125,6 +127,7 @@ const recipeSet = (fruit) => [
     fruitSlugs: [fruit.slug],
     category: "Traditional",
     title: `${fruit.name} Regional Chaat`,
+    prepTime: "15 min",
     image: `/recipes/${fruit.slug}-traditional.jpg`,
     diet: ["vegetarian", "traditional"],
     ingredients: [fruit.name, "roasted cumin", "black salt", "fresh herbs", "lime"],
@@ -189,7 +192,49 @@ const makeFruit = ([slug, name, scientificName, color, regionalNames, varieties,
 
 export const fruits = fruitSpecs.map(makeFruit);
 
-export const recipes = fruits.flatMap(recipeSet);
+const appleRecipes = [
+  {
+    id: "apple-cinnamon-oat-bowl",
+    fruitSlugs: ["apple"],
+    category: "Breakfast Bowl",
+    title: "Apple Cinnamon Overnight Oats",
+    prepTime: "10 min + chill",
+    image: "/fruits/fallback.svg",
+    diet: ["vegetarian", "high fiber"],
+    ingredients: ["apple", "rolled oats", "milk or plant milk", "chia seeds", "cinnamon", "yogurt"],
+    method: "Stir oats, milk, yogurt, chia seeds, and cinnamon in a jar. Fold in half the diced apple, cover, and refrigerate overnight. Top with the remaining apple just before serving for a crisp, fresh finish.",
+    note: "Use a firm, sweet-tart apple for the best texture.",
+    region: ["Global", "India"]
+  },
+  {
+    id: "apple-ginger-smoothie",
+    fruitSlugs: ["apple"],
+    category: "Smoothie",
+    title: "Apple Ginger Green Smoothie",
+    prepTime: "7 min",
+    image: "/fruits/fallback.svg",
+    diet: ["vegan", "hydrating"],
+    ingredients: ["apple", "spinach", "banana", "fresh ginger", "lemon", "cold water"],
+    method: "Blend chopped apple, spinach, banana, ginger, lemon juice, and cold water until smooth. Taste before adding anything sweet; ripe banana and apple are usually enough.",
+    note: "Keep the apple skin on after washing for extra fiber.",
+    region: ["Global"]
+  },
+  {
+    id: "apple-peanut-chaat",
+    fruitSlugs: ["apple"],
+    category: "Snack",
+    title: "Apple Peanut Masala Chaat",
+    prepTime: "12 min",
+    image: "/fruits/fallback.svg",
+    diet: ["vegetarian", "protein paired"],
+    ingredients: ["apple", "roasted peanuts", "cucumber", "lemon", "roasted cumin", "black salt", "coriander"],
+    method: "Toss diced apple, cucumber, roasted peanuts, coriander, cumin, black salt, and lemon juice just before serving. The peanuts add satisfying crunch and help make the snack more filling.",
+    note: "Serve immediately so the apple stays crisp.",
+    region: ["India"]
+  }
+];
+
+export const recipes = [...fruits.flatMap(recipeSet), ...appleRecipes];
 
 export const sourceNotes = {
   unavailable: "No verified live data available"

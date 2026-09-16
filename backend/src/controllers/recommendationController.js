@@ -4,7 +4,16 @@ import { Fruit } from "../models/Fruit.js";
 import { Recipe } from "../models/Recipe.js";
 
 const loadFruits = async () => (isMongoReady() ? Fruit.find().lean() : fruits);
-const loadRecipes = async () => (isMongoReady() ? Recipe.find().lean() : recipes);
+const loadRecipes = async () => {
+  if (!isMongoReady()) return recipes;
+
+  const storedRecipes = await Recipe.find().lean();
+  // Keep the built-in recipe catalog available immediately, even if the
+  // database was seeded before newer recipes were added to the application.
+  const catalog = new Map(recipes.map((recipe) => [recipe.id, recipe]));
+  storedRecipes.forEach((recipe) => catalog.set(recipe.id, recipe));
+  return [...catalog.values()];
+};
 
 export const recipeRecommendations = async (req, res) => {
   const { diet = "", region = "", allergies = "", fruit = "" } = req.query;
