@@ -6,7 +6,13 @@ import { recordMemorySearch } from "../services/analyticsStore.js";
 import { getLiveNutrition } from "../services/nutritionService.js";
 import { getTrendSignal } from "../services/trendService.js";
 
-const fruitSource = async () => (isMongoReady() ? Fruit.find().lean() : fruits);
+const fruitSource = async () => {
+  if (isMongoReady()) {
+    const stored = await Fruit.find().lean();
+    if (stored && stored.length > 0) return stored;
+  }
+  return fruits;
+};
 
 const searchText = (fruit) =>
   [
@@ -51,9 +57,13 @@ export const listFruits = async (req, res) => {
 };
 
 export const getFruit = async (req, res) => {
-  const data = isMongoReady()
-    ? await Fruit.findOne({ slug: req.params.slug }).lean()
-    : fruits.find((fruit) => fruit.slug === req.params.slug);
+  let data = null;
+  if (isMongoReady()) {
+    data = await Fruit.findOne({ slug: req.params.slug }).lean();
+  }
+  if (!data) {
+    data = fruits.find((fruit) => fruit.slug === req.params.slug);
+  }
 
   if (!data) return res.status(404).json({ message: "Fruit not found" });
 

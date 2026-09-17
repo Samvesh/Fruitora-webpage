@@ -127,7 +127,7 @@ Install Command: npm install
 Vercel environment variable:
 
 ```text
-VITE_API_URL=https://fruitoria.onrender.com/api
+VITE_API_URL=https://fruitora-webpage-1it7.onrender.com/api
 ```
 
 After both services are deployed, update the Render backend `CLIENT_URL` to the exact Vercel production URL and redeploy the backend. Then redeploy the Vercel frontend.

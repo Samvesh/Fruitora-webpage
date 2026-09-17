@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://fruitoria.onrender.com/api/$1"
+      "destination": "https://fruitora-webpage-1it7.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const productionApiUrl = "https://fruitoria.onrender.com/api";
+const productionApiUrl = "https://fruitora-webpage-1it7.onrender.com/api";
 
 export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || (import.meta.env.PROD ? productionApiUrl : "/api"),

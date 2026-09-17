@@ -54,7 +54,11 @@ export async function getUserContext(userId) {
  * Find fruits mentioned in the query, user's favorites, or health conditions
  */
 export async function getRelevantFruitKnowledge(userMessage = "", favoriteFruits = []) {
-  const allFruits = isMongoReady() ? await Fruit.find().lean() : fruits;
+  let allFruits = fruits;
+  if (isMongoReady()) {
+    const stored = await Fruit.find().lean();
+    if (stored && stored.length > 0) allFruits = stored;
+  }
   const lowerMsg = userMessage.toLowerCase();
 
   const matchedSlugs = new Set();

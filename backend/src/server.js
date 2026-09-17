@@ -20,6 +20,8 @@ const localhostOrigin = /^http:\/\/localhost(?::\d+)?$/;
 
 const isAllowedOrigin = (origin) =>
   allowedOrigins.includes(origin) ||
+  origin === "https://fruitoria.vercel.app" ||
+  /^https:\/\/fruitoria(?:-[a-z0-9-]+)?\.vercel\.app$/.test(origin) ||
   vercelPreviewOrigin.test(origin) ||
   localhostOrigin.test(origin);
 

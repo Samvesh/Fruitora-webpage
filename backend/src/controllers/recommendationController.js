@@ -3,7 +3,13 @@ import { isMongoReady } from "../config/db.js";
 import { Fruit } from "../models/Fruit.js";
 import { Recipe } from "../models/Recipe.js";
 
-const loadFruits = async () => (isMongoReady() ? Fruit.find().lean() : fruits);
+const loadFruits = async () => {
+  if (isMongoReady()) {
+    const stored = await Fruit.find().lean();
+    if (stored && stored.length > 0) return stored;
+  }
+  return fruits;
+};
 const loadRecipes = async () => {
   if (!isMongoReady()) return recipes;
 

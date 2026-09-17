@@ -13,6 +13,14 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { api } from "../api";
+
+const getAiUrl = (endpoint) => {
+  const baseUrl = api.defaults.baseURL || "";
+  return baseUrl.startsWith("http")
+    ? `${baseUrl.replace(/\/$/, "")}${endpoint}`
+    : `/api${endpoint}`;
+};
 
 const QUICK_PROMPTS = [
   "🥝 What are the health benefits & best timing for kiwi?",
@@ -160,7 +168,7 @@ export default function ChatAssistant() {
 
       if (token && user) {
         try {
-          const res = await fetch("/api/ai/history", {
+          const res = await fetch(getAiUrl("/ai/history"), {
             headers: { Authorization: `Bearer ${token}` }
           });
           if (res.ok) {
@@ -210,7 +218,7 @@ export default function ChatAssistant() {
     const token = localStorage.getItem("fruitora_token");
     if (token && user) {
       try {
-        await fetch("/api/ai/history", {
+        await fetch(getAiUrl("/ai/history"), {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -288,7 +296,7 @@ export default function ChatAssistant() {
     };
 
     try {
-      const response = await fetch("/api/ai/chat", {
+      const response = await fetch(getAiUrl("/ai/chat"), {
         method: "POST",
         headers,
         body: JSON.stringify({ message: promptText }),
