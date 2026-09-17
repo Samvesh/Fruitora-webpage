@@ -50,7 +50,7 @@ app.use(morgan("dev"));
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, limit: 300 }));
 
 app.get("/api/health", (_req, res) => {
-  res.json({ status: "ok", service: "fruit-nutrition-platform", time: new Date().toISOString() });
+  res.json({ status: "ok", service: "fruit-nutrition-platform", version: "1.0.1-env-fix", time: new Date().toISOString() });
 });
 
 app.use("/api/auth", authRoutes);
