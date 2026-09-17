@@ -27,10 +27,12 @@ const isAllowedOrigin = (origin) =>
 app.set("trust proxy", 1);
 
 console.log(
-  "[env] GROQ_API_KEY present:",
+  "[env] GROQ_API_KEY in process.env:",
   Boolean(process.env.GROQ_API_KEY),
+  "in env.groqApiKey:",
+  Boolean(env.groqApiKey),
   "length:",
-  process.env.GROQ_API_KEY?.length ?? 0
+  env.groqApiKey?.length ?? 0
 );
 validateEnv();
 await connectDB();

@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 const requiredInProduction = ["JWT_SECRET", "CLIENT_URL"];
 
 export const validateEnv = () => {
@@ -18,12 +20,31 @@ export const validateEnv = () => {
 };
 
 export const env = {
-  port: process.env.PORT || 5050,
-  clientUrl: process.env.CLIENT_URL || "http://localhost:5173",
-  usdaApiKey: process.env.USDA_API_KEY || "DEMO_KEY",
-  groqApiKey: process.env.GROQ_API_KEY,
-  groqModel: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
-  googleTrendsApiUrl: process.env.GOOGLE_TRENDS_API_URL,
-  googleTrendsApiKey: process.env.GOOGLE_TRENDS_API_KEY,
-  faostatApiUrl: process.env.FAOSTAT_API_URL || "https://fenixservices.fao.org/faostat/api/v1"
+  get port() {
+    return process.env.PORT || 5050;
+  },
+  get clientUrl() {
+    return process.env.CLIENT_URL || "http://localhost:5173";
+  },
+  get usdaApiKey() {
+    return process.env.USDA_API_KEY || "DEMO_KEY";
+  },
+  get groqApiKey() {
+    const raw = process.env.GROQ_API_KEY;
+    if (!raw) return undefined;
+    const cleaned = String(raw).trim().replace(/^["']|["']$/g, "");
+    return cleaned || undefined;
+  },
+  get groqModel() {
+    return process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+  },
+  get googleTrendsApiUrl() {
+    return process.env.GOOGLE_TRENDS_API_URL;
+  },
+  get googleTrendsApiKey() {
+    return process.env.GOOGLE_TRENDS_API_KEY;
+  },
+  get faostatApiUrl() {
+    return process.env.FAOSTAT_API_URL || "https://fenixservices.fao.org/faostat/api/v1";
+  }
 };

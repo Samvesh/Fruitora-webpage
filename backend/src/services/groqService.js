@@ -18,7 +18,9 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * @returns {AsyncGenerator<string>}
  */
 export async function* streamGroqChat(messages, options = {}) {
-  const apiKey = env.groqApiKey;
+  const apiKey =
+    env.groqApiKey ||
+    (process.env.GROQ_API_KEY ? String(process.env.GROQ_API_KEY).trim().replace(/^["']|["']$/g, "") : null);
 
   if (!apiKey) {
     throw new Error("GROQ_API_KEY is not configured in backend environment.");
